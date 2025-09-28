@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8192 - GenZGames</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="8192.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button">← Back</a>
+        <div class="logo">
+            <h1 class="title">8192</h1>
+        </div>
+    </header>
+    <main>
+        <div class="game-container">
+            <div class="game-header">
+                <div class="score-container">
+                    <div class="score-label">Score</div>
+                    <div id="current-score">0</div>
+                </div>
+                <div class="score-container">
+                    <div class="score-label">Best</div>
+                    <div id="best-score">0</div>
+                </div>
+            </div>
+            <div class="game-board-container">
+                <div id="game-board"></div>
+                <div id="game-over-screen" class="hidden">
+                    <h2>Game Over!</h2>
+                    <button id="restart-button-game-over">Play Again</button>
+                </div>
+            </div>
+            <div class="game-footer">
+                <button id="restart-button">Restart</button>
+            </div>
+        </div>
+        <div class="instructions-container">
+            <h2>How to Play</h2>
+            <p>Use your arrow keys (or swipe on mobile) to move the tiles. When two tiles with the same number touch, they merge into one!</p>
+        </div>
+    </main>
+    <footer>
+        <p>Made by Aayan Sharma | GenZGames</p>
+    </footer>
+    <script src="8192.js"></script>
+</body>
+</html>

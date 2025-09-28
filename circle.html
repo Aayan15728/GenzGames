@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw a Perfect Circle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="circle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button">← Back to GenZGames</a>
+        <h1 class="title">Draw a Perfect Circle</h1>
+    </header>
+        <div id="leaderboard">
+        <h3>High Score</h3>
+        <p id="high-score">0.00%</p>
+        <!-- <h3>Level</h3>
+        <p id="current-level">1</p> -->
+    </div>
+    <main>
+        <div class="game-container">
+            <div class="canvas-wrapper">
+                <canvas id="draw-canvas" width="600" height="600"></canvas>
+                <div id="real-time-score"></div>
+            </div>
+            <div class="controls">
+                <button id="clear-btn">Clear & Try Again</button>
+            </div>
+            <div id="result" class="hidden">
+                <h2 id="score"></h2>
+                <p id="feedback"></p>
+                <p id="worldwide-rating"></p>
+                <button id="draw-again-btn">Draw Again</button>
+                <button id="share-btn">Share Score</button>
+            </div>
+        </div>
+    </main>
+    <script src="circle.js"></script>
+</body>
+</html>

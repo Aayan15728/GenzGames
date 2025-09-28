@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tictactoe.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/mascot.png" alt="Mascot" class="mascot">
+            <h1 class="title">GenZ Games</h1>
+        </div>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-button">← Back to Games</a>
+        <div class="game-container">
+            <h1>Tic Tac Toe</h1>
+
+            <!-- Mode Selection -->
+            <div id="mode-selection" class="game-card">
+                <h2>Choose Game Mode</h2>
+                <button id="human-vs-human" class="game-button">Human vs Human</button>
+                <button id="human-vs-ai" class="game-button">Human vs AI</button>
+            </div>
+
+            <!-- Game Board -->
+            <div id="game-board-container" class="hidden">
+                <h2 id="turn-display">Player X's Turn</h2>
+                <div class="board">
+                    <div class="cell" data-cell-index="0"></div>
+                    <div class="cell" data-cell-index="1"></div>
+                    <div class="cell" data-cell-index="2"></div>
+                    <div class="cell" data-cell-index="3"></div>
+                    <div class="cell" data-cell-index="4"></div>
+                    <div class="cell" data-cell-index="5"></div>
+                    <div class="cell" data-cell-index="6"></div>
+                    <div class="cell" data-cell-index="7"></div>
+                    <div class="cell" data-cell-index="8"></div>
+                </div>
+            </div>
+
+            <!-- Result Popup -->
+            <div id="result-popup" class="game-card hidden">
+                <h2 id="result-message"></h2>
+                <button id="play-again-btn" class="game-button">Play Again</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GenZ Games. All rights reserved.</p>
+    </footer>
+
+    <script src="tictactoe.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#000000 1px, transparent 0);
+    background-size: 20px 20px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mascot {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main {
+    padding: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Responsive Design for main layout --- */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .game-card {
+        padding: 1.5rem;
+    }
+
+    .game-card .icon {
+        font-size: 2.5rem;
+    }
+
+    .game-card h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem 0;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+        gap: 1rem;
+    }
+
+    .game-card {
+        padding: 1rem;
+    }
+
+    .game-card .icon {
+        font-size: 2rem;
+    }
+
+    .game-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .mascot {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.game-card {
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0px #000000;
+}
+
+.game-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.game-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.game-card p {
+    color: #555;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.hidden {
+    display: none;
+}
+
+.receipt-container {
+    width: 80%;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 2px solid #000000;
+    border-radius: 20px;
+}
+
+.receipt-container h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#receipt-items {
+    list-style: none;
+    padding: 0;
+}
+
+/* Elon Game Styles */
+.item-card {
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 5px 5px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0px #000000;
+}
+
+.item-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.item-card h3 {
+    margin: 0;
+    color: #000000;
+}
+
+.item-card .price {
+    color: #555;
+    font-weight: 600;
+}
+
+.quantity-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.quantity-selector button {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.quantity-selector button:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.buy-button {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.buy-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+.owned {
+    font-weight: 600;
+    color: #000000;
+}
+
+.back-button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+}
+
+#balance {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

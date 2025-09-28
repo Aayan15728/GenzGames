@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spend Elon Musk's Money</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button">← Back to GenZGames</a>
+        <h1 class="title">Spend Elon Musk's Money</h1>
+    </header>
+    <main>
+        <div class="balance-container">
+            <h2>Your Balance</h2>
+            <p id="balance">$300,000,000,000</p>
+        </div>
+        <div id="items-container" class="grid-container">
+            <!-- Items will be injected here by JavaScript -->
+        </div>
+        <div class="receipt-container">
+            <h2>Receipt</h2>
+            <ul id="receipt-items">
+            </ul>
+            <hr>
+            <p>Total: <span id="total-cost">$0.00</span></p>
+        </div>
+        <div id="end-message" class="hidden">
+            <h2>You spent all of Elon's fortune! 🎉</h2>
+        </div>
+    </main>
+    <script src="elon.js"></script>
+</body>
+</html>

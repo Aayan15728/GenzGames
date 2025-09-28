@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - GenZGames</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rps.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="title">Rock Paper Scissors</h1>
+        </div>
+    </header>
+    <main>
+        <div class="game-container">
+            <div class="game-area">
+                <div class="player-section">
+                    <h2>You</h2>
+                    <div class="score" id="player-score">Score: 0</div>
+                    <div class="choice-card" id="player-choice">
+                        <span class="icon">?</span>
+                    </div>
+                </div>
+                <div class="ai-section">
+                    <h2>AI</h2>
+                    <div class="score" id="ai-score">Score: 0</div>
+                    <div class="choice-card" id="ai-choice">
+                        <span class="icon">?</span>
+                    </div>
+                </div>
+            </div>
+            <div class="results">
+                <p id="status-message">Choose your weapon!</p>
+                <p id="result-message"></p>
+            </div>
+            <div class="controls">
+                <button class="control-btn" data-choice="rock">✊</button>
+                <button class="control-btn" data-choice="paper">✋</button>
+                <button class="control-btn" data-choice="scissors">✌️</button>
+            </div>
+            <button id="play-again" class="hidden">Play Again</button>
+        </div>
+        <a href="index.html" class="back-button">&larr; Back to Home</a>
+    </main>
+    <script src="rps.js"></script>
+</body>
+</html>

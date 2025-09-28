@@ -1,0 +1,100 @@
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px #000000;
+    text-align: center;
+}
+
+body > header {
+    padding: 1rem 0;
+}
+
+.game-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.player-section, .ai-section {
+    width: 45%;
+}
+
+.score {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.choice-card {
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 5px 5px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.choice-card .icon {
+    font-size: 4rem;
+}
+
+.controls {
+    margin-bottom: 1.5rem;
+}
+
+.control-btn {
+    font-size: 4rem;
+    background: none;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin: 0 1rem;
+    box-shadow: 3px 3px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.control-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+#status-message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    min-height: 2.2rem;
+}
+
+#result-message {
+    font-size: 1.2rem;
+    color: #555;
+    min-height: 1.8rem;
+}
+
+#play-again {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#play-again:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+.glowing {
+    box-shadow: 0 0 20px 5px #feca57, 8px 8px 0px #000000;
+    border-color: #feca57;
+}

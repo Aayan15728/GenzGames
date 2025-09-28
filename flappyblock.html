@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Flappy Block</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flappyblock.css">
+</head>
+<body>
+    <a href="index.html" class="back-button">&larr; Back to Games</a>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="start-screen" class="overlay">
+            <h1>Flappy Block</h1>
+            <p class="instructions">Press Space or Tap to Flap</p>
+            <button id="start-button" class="buy-button">Play</button>
+        </div>
+        <div id="game-over-screen" class="overlay hidden">
+            <h1>Game Over</h1>
+            <p>Your Score: <span id="final-score">0</span></p>
+            <button id="restart-button" class="buy-button">Restart</button>
+        </div>
+        <div id="score-counter">Score: 0</div>
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="flap-sound" src="sounds/flap.wav"></audio>
+    <audio id="score-sound" src="sounds/score.wav"></audio>
+    <audio id="hit-sound" src="sounds/hit.wav"></audio>
+    <audio id="bg-music" src="sounds/music.mp3" loop></audio>
+
+    <script src="flappyblock.js"></script>
+</body>
+</html>

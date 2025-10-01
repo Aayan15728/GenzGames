@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing Money</title>
+    <link rel="stylesheet" href="printing_money.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="index.html" class="back-button">&larr; Back to Games</a>
+
+    <div id="bonus-event-banner"></div>
+
+    <div class="game-container">
+        <div id="animated-character"></div>
+        <h1>Printing Money</h1>
+        
+        <div id="money-display" class="card">
+            <p>Current Balance</p>
+            <h2 id="money-counter">$0</h2>
+            <p id="money-per-second">per second: $1</p>
+        </div>
+
+        <div class="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <button id="print-money-btn" class="button">Print Money</button>
+
+        <div id="visual-printer"></div>
+
+        <div class="main-layout">
+            <div class="upgrades-section">
+                <h2>Upgrades</h2>
+                <div id="upgrades-list" class="grid-container"></div>
+            </div>
+            <div class="side-section">
+                <h2>Achievements</h2>
+                <div id="achievements-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="printing_money.js"></script>
+</body>
+</html>

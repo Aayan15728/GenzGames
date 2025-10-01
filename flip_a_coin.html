@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip a Coin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flip_a_coin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button">← Back to GenZGames</a>
+        <h1 class="title">Flip a Coin</h1>
+    </header>
+    <main>
+        <div class="game-container">
+            <div class="coin-container">
+                <div id="coin" class="coin">
+                    <div class="heads"></div>
+                    <div class="tails"></div>
+                    <div class="edge"></div>
+                </div>
+            </div>
+            <button id="flip-button">Flip Coin</button>
+            <div id="result"></div>
+            <div class="scoreboard">
+                <h2>Scoreboard</h2>
+                <p>Total Flips: <span id="total-flips">0</span></p>
+                <p>Heads: <span id="heads-count">0</span></p>
+                <p>Tails: <span id="tails-count">0</span></p>
+                <button id="reset-button">Reset Score</button>
+            </div>
+        </div>
+    </main>
+    <audio id="flip-sound" src="sounds/coin-flip.mp3"></audio>
+    <script src="flip_a_coin.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+#game-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px #000000;
+    text-align: center;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    border: 2px solid #000;
+    width: 100%;
+    max-width: 360px;
+    height: 360px;
+    margin: 0 auto 2rem auto;
+    gap: 0;
+    background: #fff;
+    padding: 2px;
+}
+
+.cell {
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    caret-color: #ff6b6b;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+.cell:nth-child(3n) {
+    border-right: 3px solid #000;
+}
+
+.cell:nth-child(9n) {
+    border-right: none;
+}
+
+.row:nth-child(3n) .cell {
+    border-bottom: 3px solid #000;
+}
+
+.row:nth-child(9) .cell {
+    border-bottom: none;
+}
+
+.cell.fixed {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+.cell.selected {
+    background-color: #feca57;
+}
+
+.cell.highlight {
+    background-color: #ff6b6b40;
+}
+
+.cell.incorrect {
+    background-color: #ff000020;
+    border-color: #ff0000;
+}
+
+#controls {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#controls button {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 0.5rem;
+}
+
+#controls button:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+#difficulty {
+    margin-bottom: 1rem;
+}
+
+#difficulty span {
+    font-weight: 600;
+    margin-right: 1rem;
+}
+
+#difficulty button {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+#difficulty button.active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.back-button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+}

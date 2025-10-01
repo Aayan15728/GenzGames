@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #0F0;
+    font-family: monospace;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+.back-button {
+    color: #0F0;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid #0F0;
+    border-radius: 4px;
+}
+
+.back-button:hover {
+    background: rgba(0, 255, 0, 0.1);
+}
+
+#hint-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0F0;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0.8;
+    text-shadow: 0 0 10px #0F0;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+}
+
+#hint-message.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#hacker-console {
+    margin-top: 60px;
+    padding: 20px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+#console-output {
+    margin: 0;
+    white-space: pre;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    tab-size: 4;
+    -moz-tab-size: 4;
+}
+
+#cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background-color: #0F0;
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0F0;
+    border-radius: 4px;
+}
+
+/* Text effect */
+#console-output {
+    text-shadow: 0 0 2px #0F0;
+}
+
+#console-output {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-shadow: 0 0 5px var(--glow-color);
+    animation: flicker 0.1s infinite;
+}
+
+@keyframes flicker {
+    50% { opacity: 0.9; }
+}
+
+#cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.5em;
+    background-color: var(--text-color);
+    animation: blink 1s step-end infinite;
+    vertical-align: bottom;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-left: 1px solid var(--text-color);
+    transition: right 0.3s ease;
+    z-index: 99;
+}
+
+#sidebar.open {
+    right: 0;
+}
+
+#sidebar-toggle {
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#controls {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#controls button, #controls select, #controls input {
+    background-color: #111;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 8px;
+}
+
+#disclaimer-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8B0000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 101;
+}
+
+#dismiss-disclaimer {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    float: right;
+}

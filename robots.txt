@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /
+Sitemap:https://genzgames.vercel.app/sitemap.xml
+
+

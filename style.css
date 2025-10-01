@@ -21,6 +21,7 @@ body::before {
 }
 
 header {
+    position: relative; /* Added for absolute positioning of child elements */
     text-align: center;
     padding: 2rem 0;
 }
@@ -33,9 +34,10 @@ header {
 }
 
 .mascot {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
 }
 
 .title {
@@ -43,6 +45,7 @@ header {
     font-weight: 700;
     background: linear-gradient(45deg, #ff6b6b, #feca57);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -151,6 +154,141 @@ main {
     margin-top: 0.5rem;
     font-weight: 600;
 }
+
+/* Blog Card Specific Styles */
+.blog-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.blog-card {
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 5px 5px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0px #000000;
+}
+
+.blog-card h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blog-card .post-meta {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Allow paragraphs to take up available space */
+}
+
+.blog-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    align-self: flex-start; /* Align link to the start */
+}
+
+.blog-card a:hover {
+    text-decoration: underline;
+}
+
+/* Specific styling for individual blog post page */
+.post-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 2rem;
+    background-color: #fff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px #000000;
+}
+.post-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.post-container .post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+.post-container h3 {
+    color: #000000;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+.post-container h4 {
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+.post-container p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+.post-container ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+.post-container li {
+    margin-bottom: 8px;
+}
+.post-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+.post-container a:hover {
+    text-decoration: underline;
+}
+.back-to-blog {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 3px 3px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.back-to-blog:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
 
 footer {
     text-align: center;
@@ -277,5 +415,196 @@ footer {
     font-weight: 700;
     background: linear-gradient(45deg, #ff6b6b, #feca57);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.top-right-nav {
+    position: absolute;
+    top: 2rem; /* Adjust as needed to be below the heading */
+    right: 2rem;
+}
+
+.blog-button {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.blog-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+@media (max-width: 768px) {
+    .top-right-nav {
+        position: static; /* Revert to static for smaller screens */
+        margin-top: 1rem;
+        text-align: center;
+    }
+}
+
+.blog-button .blog-icon {
+    margin-right: 0.5rem;
+    width: 20px !important; /* Set a specific width for the image icon */
+    height: 20px !important; /* Set a specific height for the image icon */
+    vertical-align: middle; /* Align the icon vertically with the text */
+    display: inline-block; /* Ensure the image behaves as a block for sizing */
+    border: none; /* Remove any border */
+    background-color: transparent; /* Ensure no background color */
+}
+
+.blog-button .icon {
+    margin-right: 0.5rem;
+    width: 20px; /* Set a specific width for the image icon */
+    height: 20px; /* Set a specific height for the image icon */
+    vertical-align: middle; /* Align the icon vertically with the text */
+    display: inline-block; /* Ensure the image behaves as a block for sizing */
+    border: none; /* Remove any border */
+    background-color: transparent; /* Ensure no background color */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.privacy-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+.privacy-content h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.privacy-content h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-content p, .privacy-content li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.privacy-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.privacy-content ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+.privacy-content a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+.privacy-content a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .post-container,
+    .privacy-content {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+
+    .post-container h1,
+    .privacy-content h1 {
+        font-size: 2em;
+    }
+
+    .post-container h3,
+    .privacy-content h2 {
+        font-size: 1.4em;
+    }
+
+    .post-container h4 {
+        font-size: 1.1em;
+    }
+
+    .post-container p, .post-container li,
+    .privacy-content p, .privacy-content li {
+        font-size: 0.95rem;
+    }
+
+    .back-to-blog, .privacy-content .back-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-container,
+    .privacy-content {
+        padding: 1rem;
+        margin: 0.5rem auto;
+    }
+
+    .post-container h1,
+    .privacy-content h1 {
+        font-size: 1.8em;
+    }
+
+    .post-container h3,
+    .privacy-content h2 {
+        font-size: 1.2em;
+    }
+
+    .post-container h4 {
+        font-size: 1em;
+    }
+
+    .post-container p, .post-container li,
+    .privacy-content p, .privacy-content li {
+        font-size: 0.9rem;
+    }
+
+    .back-to-blog, .privacy-content .back-button {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
 }

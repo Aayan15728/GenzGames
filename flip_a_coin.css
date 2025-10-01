@@ -1,0 +1,122 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.coin-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 200px;
+}
+
+.coin {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    border-radius: 50%;
+    box-shadow: 5px 5px 0px #000000;
+    border: 2px solid #000000;
+}
+
+.coin.flipping {
+    transform: rotateY(var(--final-rotation, 1800deg));
+}
+
+.heads, .tails {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.heads {
+    background: linear-gradient(45deg, #feca57, #ffc107);
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.tails {
+    background: linear-gradient(45deg, #ff6b6b, #ee5253);
+    color: white;
+    transform: rotateY(180deg);
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+#result {
+    font-size: 2.5rem;
+    font-weight: bold;
+    min-height: 3.5rem;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+#result.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.scoreboard {
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 5px 5px 0px #000000;
+    width: 250px;
+}
+
+.scoreboard h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#flip-button, #reset-button {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 3px 3px 0px #000000;
+}
+
+#flip-button:hover, #reset-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+#flip-button:active, #reset-button:active {
+    transform: translateY(0);
+    box-shadow: 3px 3px 0px #000000;
+}
+
+#flip-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 3px 3px 0px #000000;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

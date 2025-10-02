@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.genzgames.vercel.app/index.html</loc>
+        <loc>https://genzgames.vercel.app/index.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/blog.html</loc>
+        <loc>https://genzgames.vercel.app/blog.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/blog-post-1.html</loc>
+        <loc>https://genzgames.vercel.app/blog-post-1.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/blog-post-2.html</loc>
+        <loc>https://genzgames.vercel.app/blog-post-2.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/privacypolicy.html</loc>
+        <loc>https://genzgames.vercel.app/privacypolicy.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/elon.html</loc>
+        <loc>https://genzgames.vercel.app/elon.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/circle.html</loc>
+        <loc>https://genzgames.vercel.app/circle.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/rps.html</loc>
+        <loc>https://genzgames.vercel.app/rps.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/tictactoe.html</loc>
+        <loc>https://genzgames.vercel.app/tictactoe.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/aura.html</loc>
+        <loc>https://genzgames.vercel.app/aura.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/flappyblock.html</loc>
+        <loc>https://genzgames.vercel.app/flappyblock.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/flappyblockimpossible.html</loc>
+        <loc>https://genzgames.vercel.app/flappyblockimpossible.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/8192.html</loc>
+        <loc>https://genzgames.vercel.app/8192.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/useless_button.html</loc>
+        <loc>https://genzgames.vercel.app/useless_button.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/flip_a_coin.html</loc>
+        <loc>https://genzgames.vercel.app/flip_a_coin.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.genzgames.vercel.app/password.html</loc>
+        <loc>https://genzgames.vercel.app/password.html</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -127,4 +127,5 @@
         <priority>0.9</priority>
     </url>
 </urlset>
+
 

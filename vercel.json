@@ -15,10 +15,10 @@
     { "source": "/printing-money", "destination": "/printing_money.html" },
     { "source": "/flip-a-coin", "destination": "/flip_a_coin.html" },
     { "source": "/hacker-typer", "destination": "/hacker-typer.html" },
-    { "source": "/password-game", "destination": "/password.html" }
-    { "source": "/privacy-policy", "destination": "/privacypolicy.html" }
-    { "source": "/blog", "destination": "blog.html" }
-    { "source": "/blog1", "destination": "blog-post-1.html" }
+    { "source": "/password-game", "destination": "/password.html" },
+    { "source": "/privacy-policy", "destination": "/privacypolicy.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/blog1", "destination": "/blog-post-1.html" }
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true }

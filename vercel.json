@@ -1,0 +1,26 @@
+{
+  "rewrites": [
+    { "source": "/flappy-block-impossible", "destination": "/flappyblockimpossible.html" },
+    { "source": "/flappyblock", "destination": "/flappyblock.html" },
+    { "source": "/universe-game", "destination": "/universe.html" },
+    { "source": "/rock-paper-scissors", "destination": "/rps.html" },
+    { "source": "/tictactoe", "destination": "/tictactoe.html" },
+    { "source": "/sudoku", "destination": "/sudoku.html" },
+    { "source": "/draw-a-perfect-circle", "destination": "/circle.html" },
+    { "source": "/8192", "destination": "/8192.html" },
+    { "source": "/sell-sell-sell", "destination": "/sell.html" },
+    { "source": "/spend-elonmusks-money", "destination": "/elon.html" },
+    { "source": "/the-useless-button", "destination": "/useless_button.html" },
+    { "source": "/getyouraura", "destination": "/aura.html" },
+    { "source": "/printing-money", "destination": "/printing_money.html" },
+    { "source": "/flip-a-coin", "destination": "/flip_a_coin.html" },
+    { "source": "/hacker-typer", "destination": "/hacker-typer.html" },
+    { "source": "/password-game", "destination": "/password.html" }
+    { "source": "/privacy-policy", "destination": "/privacypolicy.html" }
+    { "source": "/blog", "destination": "blog.html" }
+    { "source": "/blog1", "destination": "blog-post-1.html" }
+  ],
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true }
+  ]
+}

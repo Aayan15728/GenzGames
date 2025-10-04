@@ -30,17 +30,64 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "GenZGames",
-  "url": "https://genzgames.vercel.app/",
-  "description": "Play 16+ free browser games instantly at GenZGames — no downloads, no login required.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "GenZGames"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://genzgames.vercel.app/blog",
+      "name": "GenZGames",
+      "url": "https://genzgames.vercel.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://genzgames.vercel.app/ghost.png"
+      },
+      "sameAs": [
+        "https://x.com/GenzGames11",
+        "https://www.youtube.com/@genzgames11"
+      ],
+      "description": "GenZGames is a free online gaming website offering 16+ quick, fun, and mobile-friendly browser games with no downloads or sign-ups required.best place to cure boredom"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://genzgames.vercel.app/#website",
+      "url": "https://genzgames.vercel.app/",
+      "name": "GenZGames",
+      "alternateName": "GenZ Games",
+      "publisher": { "@id": "https://genzgames.vercel.app/blog" },
+      "inLanguage": "en",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://genzgames.vercel.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://genzgames.vercel.app/#app",
+      "name": "GenZGames",
+      "url": "https://genzgames.vercel.app/",
+      "operatingSystem": "Web",
+      "applicationCategory": "Game"
+      },
+      "description": "Play 16+ free instant browser games at GenZGames — fun, fast, and impossible-to-quit challenges. No downloads. No login. Just play.",
+      "image": "https://genzgames.vercel.app/ghost.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://genzgames.vercel.app/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://genzgames.vercel.app/"
+        }
+      ]
+    }
+  ]
 }
 </script>
-     <meta property="og:title" content="GenZ Games – Free Online Browser Games">
+
+     <meta property="og:title" content="GenZGames – Free Online Browser Games">
   <meta property="og:description" content="Play free browser games instantly. 16+ addictive games online with no downloads required.">
   <meta property="og:url" content="https://genzgames.vercel.app/">
   <meta property="og:type" content="website">
@@ -153,6 +200,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 

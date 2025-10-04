@@ -18,7 +18,7 @@
     { "source": "/password-game/", "destination": "/password.html" },
     { "source": "/privacy-policy/", "destination": "/privacypolicy.html" },
     { "source": "/blog/", "destination": "/blog.html" },
-    { "source": "/blog1/", "destination": "/blog-post-1.html" }
+    { "source": "/blog1/", "destination": "/blog-post-1.html" },
      { "source": "/blog2/", "destination": "/blog-post-2.html" }
   ],
   "redirects": [

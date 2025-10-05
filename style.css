@@ -131,6 +131,9 @@ main {
     cursor: pointer;
     box-shadow: 5px 5px 0px #000000;
     transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+    display: block; /* Make the entire card clickable */
 }
 
 .game-card:hover {

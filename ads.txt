@@ -1,0 +1,10 @@
+# ads.txt for GenzGames
+# This file declares authorized digital sellers of ad inventory on this site.
+# Learn more: https://iabtechlab.com/ads-txt/
+# Owner: GenzGames (https://genzgames.vercel.app)
+# Contact: realgenz11@gmail.com
+
+# Google AdSense
+google.com, pub-4794089557255348, DIRECT, f08c47fec0942fa0
+
+# End of ads.txt

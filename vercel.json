@@ -20,6 +20,7 @@
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/blog1", "destination": "/blog-post-1.html" },
      { "source": "/blog2", "destination": "/blog-post-2.html" }
+    { "source": "/games-to-cure-boredom", "destination": "/blog3.html" }
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true }

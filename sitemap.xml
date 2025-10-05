@@ -29,6 +29,12 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+  <url>
+        <loc>https://genzgames.vercel.app/games-to-cure-boredom</loc>
+        <lastmod>2025-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
   <!-- Privacy Policy -->
   <url>
@@ -152,3 +158,4 @@
   </url>
 
 </urlset>
+

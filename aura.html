@@ -23,30 +23,56 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Game",
-  "name": "Get Your Aura",
-  "url": "https://genzgames.vercel.app/getyouraura",
-  "description": "A light-hearted aura quiz on GenzGames for fun and sharing."
-}
-     <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://genzgames.vercel.app/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Get Your Aura",
-        "item": "https://genzgames.vercel.app/getyouraura"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://genzgames.vercel.app/#website",
+      "url": "https://genzgames.vercel.app/",
+      "name": "GenZ Games",
+      "description": "Free browser games and quizzes for Gen Z.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "GenZ Games",
+        "url": "https://genzgames.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://genzgames.vercel.app/ghost.png"
+        }
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "GenzGames",
+          "item": "https://genzgames.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Get Your Aura",
+          "item": "https://genzgames.vercel.app/getyouraura"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://genzgames.vercel.app/getyouraura#webpage",
+      "url": "https://genzgames.vercel.app/getyouraura",
+      "name": "Get Your Aura — Free Aura Quiz & Personality Game",
+      "description": "Upload a photo, enter your birth month and name, and get an instant, shareable aura rating.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Quiz",
+      "name": "Get Your Aura",
+      "url": "https://genzgames.vercel.app/getyouraura",
+      "description": "Interactive aura quiz — upload a photo and receive an instant aura rating to share with friends."
+    }
+  ]
+}
   </script>
 </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4794089557255348"

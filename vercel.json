@@ -21,7 +21,8 @@
     { "source": "/blog1", "destination": "/blog-post-1.html" },
      { "source": "/blog2", "destination": "/blog-post-2.html" },
     { "source": "/games-to-cure-boredom", "destination": "/blog3.html" },
-     { "source": "/impossible-games-to-play-online", "destination": "/blog4.html" }
+     { "source": "/impossible-games-to-play-online", "destination": "/blog4.html" },
+     { "source": "/flappy-bird-alternatives-2025", "destination": "/flappy-bird-alternatives-2025.html" }
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true }

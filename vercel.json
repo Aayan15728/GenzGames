@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    // Games (keep your existing ones)
     { "source": "/flappy-block-impossible", "destination": "/flappyblockimpossible.html" },
     { "source": "/flappyblock", "destination": "/flappyblock.html" },
     { "source": "/universe-game", "destination": "/universe.html" },
@@ -18,11 +17,7 @@
     { "source": "/hacker-typer", "destination": "/hacker-typer.html" },
     { "source": "/password-game", "destination": "/password.html" },
     { "source": "/privacy-policy", "destination": "/privacypolicy.html" },
-
-    // Blog homepage
     { "source": "/blog", "destination": "/blog.html" },
-
-    // Manual blog posts
     { "source": "/blog/genz-games-play-fun-free-impossible-browser-games", "destination": "/blog-post-1.html" },
     { "source": "/blog/ultimate-guide-mind-blowing-online-games", "destination": "/blog-post-2.html" },
     { "source": "/blog/games-to-cure-boredom", "destination": "/blog3.html" },

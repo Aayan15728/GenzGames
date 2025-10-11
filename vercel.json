@@ -1,31 +1,107 @@
 {
   "rewrites": [
-    { "source": "/flappy-block-impossible", "destination": "/flappyblockimpossible.html" },
-    { "source": "/flappyblock", "destination": "/flappyblock.html" },
-    { "source": "/universe-game", "destination": "/universe.html" },
-    { "source": "/rock-paper-scissors", "destination": "/rps.html" },
-    { "source": "/tictactoe", "destination": "/tictactoe.html" },
-    { "source": "/sudoku", "destination": "/sudoku.html" },
-    { "source": "/draw-a-perfect-circle", "destination": "/circle.html" },
-    { "source": "/8192", "destination": "/8192.html" },
-    { "source": "/sell-sell-sell", "destination": "/sell.html" },
-    { "source": "/spend-elonmusks-money", "destination": "/elon.html" },
-    { "source": "/the-useless-button", "destination": "/useless_button.html" },
-    { "source": "/getyouraura", "destination": "/aura.html" },
-    { "source": "/printing-money", "destination": "/printing_money.html" },
-    { "source": "/flip-a-coin", "destination": "/flip_a_coin.html" },
-    { "source": "/hacker-typer", "destination": "/hacker-typer.html" },
-    { "source": "/password-game", "destination": "/password.html" },
-    { "source": "/privacy-policy", "destination": "/privacypolicy.html" },
-    { "source": "/blog", "destination": "/blog.html" },
-    { "source": "/blog/genz-games-play-fun-free-impossible-browser-games", "destination": "/blog-post-1.html" },
-    { "source": "/blog/ultimate-guide-mind-blowing-online-games", "destination": "/blog-post-2.html" },
-    { "source": "/blog/games-to-cure-boredom", "destination": "/blog3.html" },
-    { "source": "/blog/hardest-online-games-youll-rage-quit", "destination": "/blog4.html" },
-    { "source": "/blog/flappy-bird-alternatives-2025", "destination": "/flappy-bird-alternatives-2025.html" },
-    { "source": "/blog/play-2048-online-tips-tricks", "destination": "/play-2048-online-tips-and-tricks.html" }
+    {
+      "source": "/flappy-block-impossible",
+      "destination": "/flappyblockimpossible.html"
+    },
+    {
+      "source": "/flappyblock",
+      "destination": "/flappyblock.html"
+    },
+    {
+      "source": "/universe-game",
+      "destination": "/universe.html"
+    },
+    {
+      "source": "/rock-paper-scissors",
+      "destination": "/rps.html"
+    },
+    {
+      "source": "/tictactoe",
+      "destination": "/tictactoe.html"
+    },
+    {
+      "source": "/sudoku",
+      "destination": "/sudoku.html"
+    },
+    {
+      "source": "/draw-a-perfect-circle",
+      "destination": "/circle.html"
+    },
+    {
+      "source": "/8192",
+      "destination": "/8192.html"
+    },
+    {
+      "source": "/sell-sell-sell",
+      "destination": "/sell.html"
+    },
+    {
+      "source": "/spend-elonmusks-money",
+      "destination": "/elon.html"
+    },
+    {
+      "source": "/the-useless-button",
+      "destination": "/useless_button.html"
+    },
+    {
+      "source": "/getyouraura",
+      "destination": "/aura.html"
+    },
+    {
+      "source": "/printing-money",
+      "destination": "/printing_money.html"
+    },
+    {
+      "source": "/flip-a-coin",
+      "destination": "/flip_a_coin.html"
+    },
+    {
+      "source": "/hacker-typer",
+      "destination": "/hacker-typer.html"
+    },
+    {
+      "source": "/password-game",
+      "destination": "/password.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacypolicy.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/blog1",
+      "destination": "/blog-post-1.html"
+    },
+    {
+      "source": "/blog2",
+      "destination": "/blog-post-2.html"
+    },
+    {
+      "source": "/games-to-cure-boredom",
+      "destination": "/blog3.html"
+    },
+    {
+      "source": "/impossible-games-to-play-online",
+      "destination": "/blog4.html"
+    },
+    {
+      "source": "/flappy-bird-alternatives-2025",
+      "destination": "/flappy-bird-alternatives-2025.html"
+    },
+    {
+      "source": "/play-2048-online-tips-and-tricks",
+      "destination": "/play-2048-online-tips-and-tricks.html"
+    }
   ],
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }

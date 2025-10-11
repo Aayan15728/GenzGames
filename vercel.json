@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    // Games (keep your existing ones)
     { "source": "/flappy-block-impossible", "destination": "/flappyblockimpossible.html" },
     { "source": "/flappyblock", "destination": "/flappyblock.html" },
     { "source": "/universe-game", "destination": "/universe.html" },
@@ -17,13 +18,17 @@
     { "source": "/hacker-typer", "destination": "/hacker-typer.html" },
     { "source": "/password-game", "destination": "/password.html" },
     { "source": "/privacy-policy", "destination": "/privacypolicy.html" },
+
+    // Blog homepage
     { "source": "/blog", "destination": "/blog.html" },
-    { "source": "/blog1", "destination": "/blog-post-1.html" },
-     { "source": "/blog2", "destination": "/blog-post-2.html" },
-    { "source": "/games-to-cure-boredom", "destination": "/blog3.html" },
-     { "source": "/impossible-games-to-play-online", "destination": "/blog4.html" },
-     { "source": "/flappy-bird-alternatives-2025", "destination": "/flappy-bird-alternatives-2025.html" },
-    { "source": "/play-2048-online-tips-and-tricks", "destination": "/play-2048-online-tips-and-tricks.html" }
+
+    // Manual blog posts
+    { "source": "/blog/genz-games-play-fun-free-impossible-browser-games", "destination": "/blog-post-1.html" },
+    { "source": "/blog/ultimate-guide-mind-blowing-online-games", "destination": "/blog-post-2.html" },
+    { "source": "/blog/games-to-cure-boredom", "destination": "/blog3.html" },
+    { "source": "/blog/hardest-online-games-youll-rage-quit", "destination": "/blog4.html" },
+    { "source": "/blog/flappy-bird-alternatives-2025", "destination": "/flappy-bird-alternatives-2025.html" },
+    { "source": "/blog/play-2048-online-tips-tricks", "destination": "/play-2048-online-tips-and-tricks.html" }
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true }

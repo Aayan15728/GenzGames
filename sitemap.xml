@@ -35,6 +35,30 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+   <url>
+        <loc>https://genzgames.fun/impossible-games-to-play-online</loc>
+        <lastmod>2025-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://genzgames.fun/flappy-bird-alternatives-2025</loc>
+        <lastmod>2025-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+   <url>
+        <loc>https://genzgames.fun/play-2048-online-tips-and-tricks</loc>
+        <lastmod>2025-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+     <url>
+        <loc>https://genzgames.fun/what-is-genzgames</loc>
+        <lastmod>2025-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
   <!-- Privacy Policy -->
   <url>
@@ -158,5 +182,6 @@
   </url>
 
 </urlset>
+
 
 

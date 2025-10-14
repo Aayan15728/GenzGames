@@ -76,6 +76,13 @@
     }
   }
   </script>
+
+  <!-- ✅ Hide Breadcrumb (SEO only) -->
+  <style>
+    nav[aria-label="Breadcrumb"] {
+      display: none !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -86,7 +93,7 @@
     </div>
   </header>
 
-  <!-- ✅ Breadcrumb moved here -->
+  <!-- ✅ Breadcrumb (hidden, but SEO-readable) -->
   <nav aria-label="Breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList">
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">

@@ -96,7 +96,7 @@
       "source": "/play-2048-online-tips-and-tricks",
       "destination": "/play-2048-online-tips-and-tricks.html"
     },
-     {
+    {
       "source": "/what-is-genzgames",
       "destination": "/what-is-genzgames.html"
     }
@@ -106,6 +106,25 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://genzgames.fun/>; rel=\"canonical\""
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
     }
   ]
 }

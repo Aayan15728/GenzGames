@@ -1,187 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- Homepage -->
   <url>
     <loc>https://genzgames.fun/</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Blog Pages -->
   <url>
     <loc>https://genzgames.fun/blog</loc>
-    <lastmod>2025-10-01</lastmod>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://genzgames.fun/blog-post-1</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://genzgames.fun/blog-post-2</loc>
+    <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- About & Info -->
   <url>
-    <loc>https://genzgames.fun/blog1</loc>
-    <lastmod>2025-10-01</lastmod>
+    <loc>https://genzgames.fun/what-is-genzgames</loc>
+    <lastmod>2025-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-    <url>
-        <loc>https://genzgames.fun/blog-post-2.html</loc>
-        <lastmod>2025-10-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-  <url>
-        <loc>https://genzgames.fun/games-to-cure-boredom</loc>
-        <lastmod>2025-10-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-   <url>
-        <loc>https://genzgames.fun/impossible-games-to-play-online</loc>
-        <lastmod>2025-10-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://genzgames.fun/flappy-bird-alternatives-2025</loc>
-        <lastmod>2025-10-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-   <url>
-        <loc>https://genzgames.fun/play-2048-online-tips-and-tricks</loc>
-        <lastmod>2025-10-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-     <url>
-        <loc>https://genzgames.fun/what-is-genzgames</loc>
-        <lastmod>2025-10-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-  <!-- Privacy Policy -->
   <url>
     <loc>https://genzgames.fun/privacy-policy</loc>
-    <lastmod>2025-10-01</lastmod>
+    <lastmod>2025-10-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
-  <!-- Games Pages -->
+  <!-- Game Pages -->
   <url>
     <loc>https://genzgames.fun/flappy-block-impossible</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/flappyblock</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/universe-game</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/rock-paper-scissors</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/tictactoe</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/sudoku</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/draw-a-perfect-circle</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/8192</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://genzgames.fun/sell-sell-sell</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://genzgames.fun/buy-buy-buy</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/spend-elonmusks-money</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/the-useless-button</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/getyouraura</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/printing-money</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/flip-a-coin</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/hacker-typer</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://genzgames.fun/password-game</loc>
-    <lastmod>2025-10-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
 </urlset>
-
-
-

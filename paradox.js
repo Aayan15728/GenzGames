@@ -88,19 +88,34 @@ document.addEventListener('DOMContentLoaded', () => {
             return totalVotes > 0 ? Math.round((paradox.votes[index] / totalVotes) * 100) : 0;
         });
         const winnerIndex = percentages[0] >= percentages[1] ? 0 : 1;
-        const winnerText = paradox.options[winnerIndex].text;
+        const winningOptionText = paradox.options[winnerIndex].text;
+        const losingOptionText = paradox.options[1 - winnerIndex].text;
+        const iconText = winningOptionText.split(' ')[0].toUpperCase().substring(0, 3); // e.g., "YES" or "FRE"
+
+        // Simulate halftone.png with a CSS gradient
+        const halftoneGradient = `rgba(0, 0, 0, 0) url('https://neal.fun/lets-settle-this/halftone.png') repeat scroll 0% 0% / 50px padding-box border-box`;
 
         return `
-            <div class="results-header">THE INTERNET HAS DECIDED.</div>
-            <div class="winner-text">☑️ It's ${winnerText.toLowerCase()}</div>
-            <div class="results-bar-container">
-                <div class="results-bar-segment left" style="width: ${percentages[0]}%;"></div>
-                <div class="results-bar-segment right" style="width: ${percentages[1]}%;"></div>
-            </div>
-            <div class="vote-count">${totalVotes.toLocaleString()} votes</div>
-            <div class="results-labels">
-                <span>${paradox.options[0].text} (${percentages[0]}%)</span>
-                <span>${paradox.options[1].text} (${percentages[1]}%)</span>
+            <div style="background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;border:1.11111px solid rgb(47, 93, 114);border-radius:5px;box-shadow:rgb(47, 93, 114) 7px 7px 0px 0px;line-height:24px;padding:25px 20px 20px;text-align:center;box-sizing:border-box;margin:0px auto;width:640px;max-width:calc(100% - 40px);">
+                <div style="font-size:20px;box-sizing:border-box;margin:0px;">
+                    <div style="font-size:20px;font-weight:700;margin-bottom:10px;text-transform:uppercase;box-sizing:border-box;margin:0px 0px 10px;">
+                        The internet has decided.
+                    </div>
+                    <img src="/lets-settle-this/gif.svg" style="height:18.9931px;left:-6px;position:relative;top:3px;box-sizing:border-box;margin:0px;" />
+                    <span style="box-sizing:border-box;margin:0px;">It's pronounced&nbsp;${winningOptionText.toLowerCase()}.</span>
+                </div>
+                <div style="background:rgb(247, 249, 255) none repeat scroll 0% 0% / auto padding-box border-box;border:1.11111px solid rgb(47, 93, 114);border-radius:5px;height:25px;margin-top:15px;overflow:hidden;position:relative;box-sizing:border-box;margin:15px 0px 0px;">
+                    <div style="width: ${percentages[winnerIndex]}%;background:${halftoneGradient};height:22.7778px;transition:width 1s ease-in-out;box-sizing:border-box;margin:0px;"></div>
+                </div>
+                <div style="display:flex;font-size:15px;justify-content:space-between;margin-top:2px;padding:0px 3px;position:relative;box-sizing:border-box;margin:2px 0px 0px;">
+                    <div style="text-align:left;white-space:nowrap;box-sizing:border-box;margin:0px;overflow:hidden;text-overflow:ellipsis;flex-basis:30%;max-width:30%;">
+                        ${winningOptionText} (<span style="box-sizing:border-box;margin:0px;">${percentages[winnerIndex]}</span>%)
+                    </div>
+                    <div style="box-sizing:border-box;margin:0px;flex-basis:40%;max-width:40%;"><span style="box-sizing:border-box;margin:0px;">${totalVotes.toLocaleString()}</span> votes</div>
+                    <div style="text-align:right;white-space:nowrap;box-sizing:border-box;margin:0px;overflow:hidden;text-overflow:ellipsis;flex-basis:30%;max-width:30%;">
+                        ${losingOptionText} (<span style="box-sizing:border-box;margin:0px;">${percentages[1 - winnerIndex]}</span>%)
+                    </div>
+                </div>
             </div>
         `;
     }

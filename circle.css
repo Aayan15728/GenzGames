@@ -54,6 +54,7 @@
     font-weight: 700;
     background: linear-gradient(45deg, #ff6b6b, #feca57);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
 }
@@ -108,4 +109,38 @@
 
 .hidden {
     display: none !important;
+}
+
+@media (max-width: 768px) {
+    #draw-canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .game-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 0.5rem;
+    }
+
+    #score {
+        font-size: 3rem;
+    }
+
+    #feedback {
+        font-size: 1rem;
+    }
+
+    #worldwide-rating {
+        font-size: 0.9rem;
+    }
+
+    #draw-again-btn, #share-btn, #clear-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
 }

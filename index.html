@@ -40,7 +40,9 @@
       "url": "https://genzgames.fun/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://genzgames.fun/ghost.png"
+        "url": "https://genzgames.fun/ghost.png",
+        "width": 512,
+        "height": 512
       },
       "sameAs": [
         "https://x.com/GenzGames11",
@@ -54,13 +56,75 @@
       "url": "https://genzgames.fun/",
       "name": "GenZGames",
       "alternateName": "GenZ Games",
-      "publisher": { "@id": "https://genzgames.vercel.app/#organization" },
+      "publisher": { "@id": "https://genzgames.fun/#organization" },
       "inLanguage": "en",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://genzgames.fun/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
-      }
+      },
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "name": "Flappy Block Impossible",
+          "url": "https://genzgames.fun/flappy-block-impossible",
+          "description": "The hardest flappy-style challenge! Test your reflexes and patience in this impossible arcade game."
+        },
+        {
+          "@type": "WebPage",
+          "name": "Draw a Perfect Circle",
+          "url": "https://genzgames.fun/draw-a-perfect-circle",
+          "description": "Test your precision by drawing the most perfect circle possible. Fun, skill-based, and addictive!"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Spend Elon Musk’s Money",
+          "url": "https://genzgames.fun/spend-elonmusks-money",
+          "description": "Can you spend billions fast enough? Try this viral simulator and burn through a billionaire’s fortune!"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Rock Paper Scissors vs AI",
+          "url": "https://genzgames.fun/rock-paper-scissors",
+          "description": "Play Rock Paper Scissors against a smart AI that learns your moves. Outsmart the machine if you can!"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Sudoku",
+          "url": "https://genzgames.fun/sudoku",
+          "description": "Solve classic Sudoku puzzles instantly in your browser — no downloads, no sign-ups."
+        },
+        {
+          "@type": "WebPage",
+          "name": "Tic Tac Toe",
+          "url": "https://genzgames.fun/tictactoe",
+          "description": "Challenge a friend or our AI in this quick and clever Tic Tac Toe match."
+        },
+        {
+          "@type": "WebPage",
+          "name": "Get Your Aura",
+          "url": "https://genzgames.fun/getyouraura",
+          "description": "Discover your unique aura and its hidden meaning in this fun personality-based game."
+        },
+        {
+          "@type": "WebPage",
+          "name": "8192",
+          "url": "https://genzgames.fun/8192",
+          "description": "Merge tiles to reach the legendary 8192 — a number puzzle for true strategists."
+        },
+        {
+          "@type": "WebPage",
+          "name": "The Useless Button",
+          "url": "https://genzgames.fun/the-useless-button",
+          "description": "Press the mysterious button and uncover its hilarious secrets."
+        },
+        {
+          "@type": "WebPage",
+          "name": "Buy Buy Buy",
+          "url": "https://genzgames.fun/buy-buy-buy",
+          "description": "Dive into stock market chaos! Buy, sell, and try to make millions in this fast-paced simulator."
+        }
+      ]
     },
     {
       "@type": "SoftwareApplication",
@@ -74,55 +138,84 @@
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://genzgames.fun/#breadcrumbs",
+      "@id": "https://genzgames.fun/#breadcrumb",
       "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://genzgames.fun/" },
+        { "@type": "ListItem", "position": 2, "name": "Flappy Block Impossible", "item": "https://genzgames.fun/flappy-block-impossible" },
+        { "@type": "ListItem", "position": 3, "name": "Tic Tac Toe", "item": "https://genzgames.fun/tictactoe" },
+        { "@type": "ListItem", "position": 4, "name": "Sudoku", "item": "https://genzgames.fun/sudoku" },
+        { "@type": "ListItem", "position": 5, "name": "Rock Paper Scissors", "item": "https://genzgames.fun/rock-paper-scissors" },
+        { "@type": "ListItem", "position": 6, "name": "8192", "item": "https://genzgames.fun/8192" },
+        { "@type": "ListItem", "position": 7, "name": "Hacker Typer", "item": "https://genzgames.fun/hacker-typer" },
+        { "@type": "ListItem", "position": 8, "name": "Password Game", "item": "https://genzgames.fun/password-game" },
+        { "@type": "ListItem", "position": 9, "name": "Spend Elon Musk's Money", "item": "https://genzgames.fun/spend-elonmusks-money" },
+        { "@type": "ListItem", "position": 10, "name": "Blog", "item": "https://genzgames.fun/blog" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://genzgames.fun/"
+          "@type": "Question",
+          "name": "What kind of games does GenZGames offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GenZGames features fun and challenging online games — paradox simulators, logic puzzles, strategy experiments, and mini-games like 8192, Rock Paper Scissors AI, and Universe Builder. All are free to play directly in your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to sign up or download anything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. GenZGames is a browser-based platform — no downloads or accounts required. Just click, play, and have fun instantly on any device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I share or embed GenZGames titles on my own site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, players can share or embed GenZGames titles freely by linking to the official URLs. The platform supports creators who want to showcase or review GenZGames projects online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is behind GenZGames?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GenZGames is developed by Aayan Sharma, a young indie creator passionate about building interactive and intelligent browser games for the Gen Z era."
+          }
         }
       ]
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What kind of games does GenZGames offer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "GenZGames features fun and challenging online games — paradox simulators, logic puzzles, strategy experiments, and mini-games like 8192, Rock Paper Scissors AI, and Universe Builder. All are free to play directly in your browser."
-      }
     },
     {
-      "@type": "Question",
-      "name": "Do I need to sign up or download anything?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. GenZGames is a browser-based platform — no downloads or accounts required. Just click, play, and have fun instantly on any device."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I share or embed GenZGames titles on my own site?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, players can share or embed GenZGames titles freely by linking to the official URLs. The platform supports creators who want to showcase or review GenZGames projects online."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who is behind GenZGames?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "GenZGames is developed by Aayan Sharma, a young indie creator passionate about building interactive and intelligent browser games for the Gen Z era."
-      }
+      "@type": "SiteNavigationElement",
+      "@id": "https://genzgames.fun/#sitenav",
+      "name": [
+        "Home",
+        "Flappy Block Impossible",
+        "Tic Tac Toe",
+        "Sudoku",
+        "Rock Paper Scissors",
+        "8192",
+        "Draw a Perfect Circle",
+        "Hacker Typer",
+        "Password Game",
+        "Spend Elon Musk's Money"
+      ],
+      "url": [
+        "https://genzgames.fun/",
+        "https://genzgames.fun/flappy-block-impossible",
+        "https://genzgames.fun/tictactoe",
+        "https://genzgames.fun/sudoku",
+        "https://genzgames.fun/rock-paper-scissors",
+        "https://genzgames.fun/8192",
+        "https://genzgames.fun/draw-a-perfect-circle",
+        "https://genzgames.fun/hacker-typer",
+        "https://genzgames.fun/password-game",
+        "https://genzgames.fun/spend-elonmusks-money"
+      ]
     }
   ]
 }
@@ -143,7 +236,7 @@
 <meta name="twitter:description" content="Play free browser games instantly. 16+ addictive games online with no downloads required.">
 <meta name="twitter:image" content="https://genzgames.fun/ghost.png">
 <meta name="twitter:url" content="https://genzgames.fun/">
-    <script type="application/ld+json">
+       <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -663,5 +756,3 @@
     </div>
 </body>
 </html>
-
-

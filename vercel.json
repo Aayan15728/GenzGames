@@ -24,7 +24,11 @@
     { "source": "/impossible-games-to-play-online", "destination": "/blog4.html" },
     { "source": "/flappy-bird-alternatives-2025", "destination": "/flappy-bird-alternatives-2025.html" },
     { "source": "/play-2048-online-tips-and-tricks", "destination": "/play-2048-online-tips-and-tricks.html" },
-    { "source": "/what-is-genzgames", "destination": "/what-is-genzgames.html" }
+    { "source": "/what-is-genzgames", "destination": "/what-is-genzgames.html" },
+      { "source": "/paradox", "destination": "/paradox.html" },
+      { "source": "/complement-button", "destination": "/compliment-clicker.html" }
+   
+   
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true }

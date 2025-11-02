@@ -16,7 +16,7 @@ body {
     background-size: 30px 30px;
     color: var(--text-color);
     margin: 0;
-    padding: 2rem 1rem;
+    padding: 0; /* Remove body padding */
     position: relative;
     overflow-x: hidden;
 }
@@ -53,15 +53,45 @@ body::after {
 }
 
 header {
+    /* No longer needs to be relative for mascot, as mascot is fixed */
+    display: flex; /* Use flexbox for centering title/subtitle */
+    flex-direction: column;
+    align-items: center; /* Center title/subtitle horizontally */
     margin-bottom: 5rem;
+    padding-top: 0; /* Remove padding-top from header */
+    width: 100%;
 }
 
-h1 {
+.paradox-mascot-link {
+    position: absolute; /* Position relative to the header */
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    z-index: 10; /* Ensure mascot is above other elements */
+    display: block; /* Make the link a block element */
+}
+
+.paradox-mascot-link:hover {
+    transform: scale(1.1);
+}
+
+.paradox-mascot {
+    width: 100%; /* Make image fill the link container */
+    height: auto;
+    display: block;
+}
+
+.centered-title {
     font-family: var(--title-font);
     font-size: 5rem;
     font-weight: 400;
     color: var(--title-color);
-    margin: 1rem 0;
+    margin: 1rem 0; /* Keep vertical margin, horizontal handled by flexbox */
+    text-align: center; /* Ensure text itself is centered */
+    width: auto; /* Let content define width */
 }
 
 p.subtitle {

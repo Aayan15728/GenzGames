@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const paradoxesContainer = document.getElementById('paradoxes-container');
     const paradoxesRef = database.ref('paradoxes');
     let userChoices = JSON.parse(localStorage.getItem('userChoices')) || {};
+    const paradoxMascot = document.getElementById('paradox-mascot-link'); // Get the mascot link
 
     const paradoxesData = [
         { id: 1, question: "If everything is predetermined, are you really choosing right now?", options: [{ text: "Yes, free will is real" }, { text: "No, everything is fate" }] },
@@ -197,4 +198,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initializeDatabase();
     paradoxesContainer.addEventListener('click', handleVote);
+
 });

@@ -635,3 +635,34 @@ footer {
     height: 1px;
     overflow: hidden;
 }
+
+#paradox-card {
+    background-color: #f0f8ff; /* A light blue background */
+    border: 2px solid #000000; /* Black border */
+    box-shadow: 5px 5px 0px #000000; /* Black shadow */
+    min-height: 180px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#paradox-card:hover {
+    box-shadow: 8px 8px 0px #000000;
+}
+
+.paradox-title {
+    font-family: 'Patrick Hand', cursive;
+    color: #00008b;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.paradox-line-1 {
+    display: block;
+}
+
+.paradox-line-2 {
+    display: block;
+    font-size: 2.6rem; /* Larger font for the second line */
+}

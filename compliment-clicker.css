@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Default font for body */
+    background-color: #ffffffff; /* Light background, no dots */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.main-header {
+    position: absolute;
+    top: 20px;
+    padding: 0;
+    width: 95%; /* Change width to 95% */
+    max-width: none;
+    box-sizing: content-box;
+    display: flex; /* Add display: flex */
+    justify-content: space-between; /* Add justify-content: space-between */
+    align-items: center; /* Add align-items: center */
+    left: 50%; /* Add left: 50% */
+    transform: translateX(-50%); /* Add transform: translateX(-50%) */
+}
+
+.game-icon {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.game-icon:hover {
+    transform: scale(1.1);
+}
+
+.title {
+    font-family: 'Patrick Hand', cursive; /* Font from Paradox game */
+    font-size: 69px;
+    color: #6b6b6b;
+    margin: 0;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center; /* Center the title */
+    position: absolute; /* Position title absolutely */
+    top: 100px; /* Adjust as needed to center it */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    /* No dotted background */
+    border-radius: 20px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#roast-container {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ff6b6b; /* Roast color */
+    min-height: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    max-width: 90%;
+    margin-bottom: 1.5rem; /* Adjusted spacing */
+}
+
+#roast-container.show {
+    opacity: 1;
+}
+
+.click-button {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 3px 3px 0px #000000;
+    font-size: 1.5rem;
+    user-select: none;
+    margin-bottom: 1.5rem; /* Adjusted spacing */
+}
+
+.click-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+.click-button:active {
+    transform: translateY(0);
+    box-shadow: 3px 3px 0px #000000;
+}
+
+.counter-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .main-header {
+        gap: 10px;
+        padding: 10px;
+    }
+    .ghost-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .title {
+        font-size: 40px;
+    }
+    #roast-container {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .click-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .counter-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 32px;
+    }
+    .click-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+}
+.home-button {
+    text-decoration: none;
+    color: #6b6b6b;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.home-button:hover {
+    color: #000;
+}

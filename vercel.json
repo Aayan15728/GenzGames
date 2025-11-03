@@ -33,19 +33,19 @@
     { "source": "/index.html", "destination": "/", "permanent": true }
   ],
 
- "headers": [
+  "headers": [
     {
       "source": "/(.*)",
       "headers": [
         { "key": "X-Robots-Tag", "value": "index, follow" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" } /* Standard cache for general assets */
+        { "key": "Cache-Control", "value": "public, max-age=3600" } 
       ]
     },
     {
       "source": "/sitemap.xml",
       "headers": [
         { "key": "Content-Type", "value": "application/xml" },
-        { "key": "Cache-Control", "value": "public, max-age=86400" } /* Cache for 24 hours (86400s) */
+        { "key": "Cache-Control", "value": "public, max-age=86400" } /* Stable 24hr cache for sitemap */
       ]
     },
     {
@@ -56,3 +56,4 @@
       ]
     }
   ]
+}

@@ -37,27 +37,24 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Link", "value": "<https://genzgames.fun/>; rel=\"canonical\"" },
+        /* NOTE: Removed redundant general canonical header here for clarity,
+           it's better handled within the HTML of each page. */
         { "key": "X-Robots-Tag", "value": "index, follow" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        { "key": "Cache-Control", "value": "public, max-age=3600" } /* Standard cache for general assets */
       ]
     },
     {
       "source": "/sitemap.xml",
       "headers": [
-        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
-        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, proxy-revalidate" },
-        { "key": "Pragma", "value": "no-cache" },
-        { "key": "Expires", "value": "0" }
+        { "key": "Content-Type", "value": "application/xml" }, /* Simplified Content-Type */
+        { "key": "Cache-Control", "value": "public, max-age=86400" } /* Cache for 24 hours */
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
         { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
-        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, proxy-revalidate" },
-        { "key": "Pragma", "value": "no-cache" },
-        { "key": "Expires", "value": "0" }
+        { "key": "Cache-Control", "value": "public, max-age=86400" } /* Cache for 24 hours */
       ]
     }
   ]

@@ -75,4 +75,24 @@ document.addEventListener('DOMContentLoaded', () => {
         resultSection.classList.add('hidden');
         formSection.classList.remove('hidden');
     });
+
+    // Info Modal Logic
+    const infoIcon = document.getElementById('info-icon');
+    const infoModal = document.getElementById('info-modal');
+    const closeButton = document.querySelector('.close-button');
+
+    infoIcon.addEventListener('click', () => {
+        infoModal.classList.remove('hidden');
+    });
+
+    closeButton.addEventListener('click', () => {
+        infoModal.classList.add('hidden');
+    });
+
+    // Also close modal if user clicks outside of the content area
+    infoModal.addEventListener('click', (e) => {
+        if (e.target === infoModal) {
+            infoModal.classList.add('hidden');
+        }
+    });
 });

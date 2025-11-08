@@ -28,7 +28,9 @@
     { "source": "/paradox", "destination": "/paradox.html" },
     { "source": "/compliment-button", "destination": "/compliment-clicker.html" },
      { "source": "/about-us", "destination": "/about-us.html" },
-     { "source": "/terms-of-use", "destination": "/terms-of-use.html" }
+     { "source": "/terms-of-use", "destination": "/terms-of-use.html" },
+     { "source": "/browser-games-to-try-once", "destination": "/browser-games-to-try-once.html" },
+     { "source": "/why-play-browser-games", "destination": "/why-play-browser-games.html" }
   ],
 
   "redirects": [

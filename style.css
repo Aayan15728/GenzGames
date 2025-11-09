@@ -666,3 +666,18 @@ footer {
     display: block;
     font-size: 2.6rem; /* Larger font for the second line */
 }
+
+.ten-years-ago-title {
+    font-family: 'Bauhaus 93', sans-serif;
+    font-size: 2.4rem !important; /* Increased font size and added !important */
+    line-height: 1.1; /* Adjusted line-height to prevent cutoff */
+    margin-bottom: 0.1rem;
+    letter-spacing: 0.01rem;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 2.8rem;
+    padding-top: 1.8rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    flex-wrap: wrap !important;
+}

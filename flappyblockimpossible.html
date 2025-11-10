@@ -19,13 +19,13 @@
     <meta name="description" content="Play Flappy Block Impossible – the most HARDEST Flappy Bird-style game ON INTERNET. Test your skills and reflexes. Free browser game, instant play, highly addictive!">
     <meta name="keywords" content="Flappy Block Impossible, hardest game on internet, impossible flappy game, GenZGames, hardcore reflex game, flappy block challenge, most difficult game ever, rage game, flappy block impossible online, hardest flappy game, extreme flappy challenge, play flappy block impossible free, no download flappy game, flappy impossible GenZGames, hardest arcade game, impossible flappy bird alternative, trending hardest game 2025, best reflex game online, ultimate challenge flappy game, hardest mobile game web" />
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="canonical" href="https://genzgames.fun/flappy-block-impossible">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="flappyblockimpossible.css">
+    <link rel="stylesheet" href="info-modal.css">
     <meta property="og:title" content="Flappy Block Impossible — Hardest Game on the Internet | GenZGames" />
 <meta property="og:description" content="The internet’s toughest flappy challenge — tiny gaps, instant rage. Play free, no downloads." />
     <meta property="og:type" content="website" />
-<meta property="og:url" content="https://genzgames.fun/flappy-block-impossible" />
+<meta property="og:url" content="https://genzgames.fun/flappyblockimpossible.html" />
 <meta property="og:site_name" content="GenZGames" />
     <script type="application/ld+json">
 {
@@ -95,6 +95,47 @@
     <audio id="bg-music" src="sounds/music.mp3" loop></audio>
 
     <script src="flappyblockimpossible.js"></script>
-   
+    <script src="info-modal.js"></script>
+    <div class="hidden-description">
+        <h2>What is "Flappy Block Impossible" and What to Do:</h2>
+        <p>"Flappy Block Impossible" is not just a game; it's a legendary test of human patience, reflexes, and mental fortitude, widely regarded as one of the hardest browser games available on the internet. Building upon the notoriously difficult "Flappy Bird" genre, this iteration amplifies every aspect of its predecessor to create an almost insurmountable challenge. Players are tasked with guiding a small, pixelated block through an endless, vertically scrolling gauntlet of extremely narrow gaps between obstacles. Unlike its more forgiving counterparts, "Flappy Block Impossible" features gaps that are barely wider than the block itself, demanding absolute pixel-perfect precision and an uncanny sense of timing. The game's physics are designed to be unforgiving, with gravity pulling the block down relentlessly and each "flap" providing only a minimal, precise lift. The primary objective is to survive for as long as possible, accumulating points for every set of obstacles successfully navigated. However, even a single point is a monumental achievement in this game. Your mission is to defy the odds, push past frustration, and attempt to conquer a digital Everest. This game is specifically designed for hardcore gamers who crave extreme challenges, those who are not deterred by constant failure but are instead motivated by the pursuit of ultimate mastery. It's a true "rage game" that will test the limits of your composure, offering an unparalleled sense of accomplishment for even the smallest victories. Prepare for an intense, relentless, and utterly captivating experience where every millisecond counts and every successful flap feels like a triumph against the impossible.</p>
+
+        <h2>How to Play "Flappy Block Impossible":</h2>
+        <p>Playing "Flappy Block Impossible" requires a combination of precise input, keen observation, and an almost meditative focus. The game interface is minimalist, featuring a canvas where your block will appear on the left side, and a continuous stream of obstacles will scroll in from the right. To begin, you'll see a "start-screen" with instructions to "Press Space or Tap to Flap." Initiate the game by pressing the spacebar on your keyboard or tapping the screen if you're on a touch-enabled device. Once started, your block will immediately begin its descent due to gravity. Your sole control mechanism is the "flap" action: each press of the spacebar or tap on the screen will cause the block to ascend a very small, fixed distance. The critical challenge lies in timing these flaps perfectly to guide your block through the incredibly tight horizontal gaps between the upper and lower obstacle segments. These gaps are significantly smaller than in standard flappy-style games, leaving almost no room for error. You must anticipate the incoming obstacles, adjusting your block's vertical position with rapid, precise taps to ensure it passes cleanly through the center of each opening. A collision with any part of an obstacle or the top/bottom edges of the screen will instantly end the game, triggering the "game-over-screen" which displays your score. A "Restart" button is provided for immediate re-engagement, as you'll likely be using it frequently. The game also features subtle sound effects for flaps, scores, and collisions, providing auditory cues that can aid in timing. Success in "Flappy Block Impossible" is not about brute force tapping, but about finding a delicate, consistent rhythm that allows for controlled ascent and descent, navigating the unforgiving environment with surgical precision. It's a game that demands your full attention and rewards only the most persistent and skilled players.</p>
+    </div>
+
+    <div class="info-icon-container">
+        <img src="infoicon.png" alt="Info" id="info-icon">
+    </div>
+
+    <div id="info-modal" class="hidden">
+        <div class="info-content">
+            <span class="close-button">&times;</span>
+            <h2>About Flappy Block Impossible</h2>
+            <div class="info-section">
+                <h3>Overview</h3>
+                <p>This is a placeholder for the game's overview. It will be at least 1500 words long and will provide a comprehensive description of the game, its mechanics, and its objectives.</p>
+            </div>
+            <div class="info-section">
+                <h3>How to Play</h3>
+                <p>This section will provide detailed instructions on how to play the game, including controls, rules, and tips for success.</p>
+            </div>
+            <div class="info-section">
+                <h3>Summary</h3>
+                <p>This section will provide a brief summary of the game, highlighting its key features and what makes it unique.</p>
+            </div>
+            <div class="info-section">
+                <h3>Similar Games</h3>
+                <div class="similar-games-grid">
+                    <a href="/flappyblock" class="game-card similar-game-card">
+                        <h2>Flappy Block</h2>
+                    </a>
+                    <a href="/universe-game" class="game-card similar-game-card">
+                        <h2>Universe Game</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

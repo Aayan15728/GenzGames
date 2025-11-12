@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="flappyblock.css">
+    <link rel="stylesheet" href="info-modal.css">
     <link rel="canonical" href="https://genzgames.fun/flappyblock" />
     <script type="application/ld+json">
 {
@@ -86,12 +87,47 @@
     <audio id="bg-music" src="sounds/music.mp3" loop></audio>
 
     <script src="flappyblock.js"></script>
+    <script src="info-modal.js"></script>
     <div class="hidden-description">
         <h2>What is "Flappy Block" and What to Do:</h2>
         <p>"Flappy Block" is an incredibly addictive and challenging arcade-style browser game that draws inspiration from the classic "Flappy Bird" phenomenon, reimagined with a unique block-based aesthetic. In this fast-paced game, players control a small, pixelated block that must navigate through a series of vertically scrolling obstacles, typically represented as pipes or gaps. The core objective is to keep the block airborne and guide it through as many gaps as possible without colliding with any of the barriers or touching the ground. This seemingly simple premise belies a high level of difficulty and requires precise timing, quick reflexes, and unwavering concentration. Each successful passage through a gap earns the player a point, and the game continues indefinitely until a collision occurs. The game's minimalist design, coupled with its unforgiving mechanics, creates an intense and highly engaging experience that encourages players to constantly strive for a higher score. Your primary task is to master the "flapping" mechanic, which involves tapping or pressing a key to make the block ascend, and then allowing gravity to pull it down. The rhythm of these actions is crucial for navigating the narrow openings between obstacles. "Flappy Block" is more than just a test of reflexes; it's a lesson in patience and persistence, as players will inevitably face numerous failures before achieving a respectable score. It's a perfect game for quick bursts of entertainment, offering a satisfying challenge for anyone who enjoys high-score chasing and arcade action.</p>
 
         <h2>How to Play "Flappy Block":</h2>
         <p>Playing "Flappy Block" is straightforward in its controls but demanding in its execution. Upon starting the game, you'll see your block positioned on the left side of the screen, with obstacles slowly approaching from the right. The game begins with a "start-screen" displaying instructions: "Press Space or Tap to Flap." To initiate gameplay, click the "Play" button or simply press the spacebar (or tap on a touchscreen device). Once the game starts, your block will begin to fall due to gravity. To make the block ascend, you must repeatedly press the spacebar or tap the screen. Each press or tap provides a small upward thrust, counteracting gravity. The key to success is to find a consistent rhythm of tapping that allows your block to maintain an altitude that can safely pass through the gaps in the incoming obstacles. The obstacles consist of two vertical segments with an opening in between. You must guide your block through this opening. If your block touches any part of an obstacle or falls to the bottom of the screen, the game ends, and the "game-over-screen" will appear, displaying your "final-score." From this screen, you can click the "Restart" button to begin a new game. A "score-counter" is visible during gameplay, tracking your progress in real-time. The game also includes sound effects for flapping, scoring, and hitting obstacles, enhancing the immersive experience. Mastering "Flappy Block" involves developing a keen sense of timing and anticipating the movement of the obstacles, making it a highly rewarding challenge for those who persevere.</p>
+    </div>
+
+    <div class="info-icon-container">
+        <img src="infoicon.png" alt="Info" id="info-icon">
+    </div>
+
+    <div id="info-modal" class="hidden">
+        <div class="info-content">
+            <span class="close-button">&times;</span>
+            <h2>About Flappy Block</h2>
+            <div class="info-section">
+                <h3>Overview</h3>
+                <p>This is a placeholder for the game's overview. It will be at least 1500 words long and will provide a comprehensive description of the game, its mechanics, and its objectives.</p>
+            </div>
+            <div class="info-section">
+                <h3>How to Play</h3>
+                <p>This section will provide detailed instructions on how to play the game, including controls, rules, and tips for success.</p>
+            </div>
+            <div class="info-section">
+                <h3>Summary</h3>
+                <p>This section will provide a brief summary of the game, highlighting its key features and what makes it unique.</p>
+            </div>
+            <div class="info-section">
+                <h3>Similar Games</h3>
+                <div class="similar-games-grid">
+                    <a href="/flappyblockimpossible" class="game-card similar-game-card">
+                        <h2>Flappy Block Impossible</h2>
+                    </a>
+                    <a href="/universe-game" class="game-card similar-game-card">
+                        <h2>Universe Game</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

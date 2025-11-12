@@ -30,7 +30,9 @@
      { "source": "/about-us", "destination": "/about-us.html" },
      { "source": "/terms-of-use", "destination": "/terms-of-use.html" },
      { "source": "/browser-games-to-try-once", "destination": "/browser-games-to-try-once.html" },
-     { "source": "/why-play-browser-games", "destination": "/why-play-browser-games.html" }
+     { "source": "/why-play-browser-games", "destination": "/why-play-browser-games.html" },
+     { "source": "/ten-years-ago", "destination": "/ten-years-ago.html" },
+     { "source": "/why-i-like-genzgames", "destination": "/why-i-like-genzgames.html" }
   ],
 
   "redirects": [

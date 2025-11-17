@@ -1,0 +1,125 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const gameImage = document.getElementById('game-image');
+    const realBtn = document.querySelector('.real-btn');
+    const aiBtn = document.querySelector('.ai-btn');
+    const progressSpan = document.querySelector('.progress span');
+    const reloadBtn = document.querySelector('.reload-btn');
+    const gameControls = document.querySelector('.game-controls');
+    const feedbackContainer = document.querySelector('.feedback-container');
+    const feedbackText = document.getElementById('feedback-text');
+    const nextBtn = document.querySelector('.next-btn');
+    const mainContent = document.querySelector('main');
+    const scoreScreen = document.querySelector('.score-screen');
+    const finalScoreSpan = document.getElementById('final-score');
+    const totalQuestionsDisplaySpan = document.getElementById('total-questions-display');
+    const playAgainBtn = document.querySelector('.play-again-btn');
+
+
+    const imageData = [
+        { src: 'is-it-ai-game-image-this-image-is-real(hard).jpeg', type: 'real' },
+        { src: 'is-it-ai-game-image-this-image-is-ai(hard).png', type: 'ai' },
+        { src: 'is-it-ai-game-image-this-image-is-real(medium).jpeg', type: 'real' },
+        { src: 'is-it-ai-game-image-this-image-is-ai(impossible).jpeg', type: 'ai' },
+        { src: 'is-it-ai-game-image-this-image-is-real(easy).jpeg', type: 'real' },
+        { src: 'is-it-ai-game-image-this-image-is-ai(hard) (2).png', type: 'ai' },
+        { src: 'is-it-ai-game-image-this-image-is-real(hard).jpg', type: 'real' },
+        { src: 'is-it-ai-game-image-this-image-is-ai(hard)1.png', type: 'ai' },
+        { src: 'is-it-ai-game-image-this-image-is-ai(hard) (3).png', type: 'ai' },
+        { src: 'is-it-ai-game-image-this-image-is-real(hard)1.png', type: 'real' }
+    ];
+
+    let currentImageIndex = 0;
+    let score = 0;
+    const totalQuestions = imageData.length;
+    let shuffledImages = [];
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    function startGame() {
+        shuffledImages = shuffleArray([...imageData]);
+        currentImageIndex = 0;
+        score = 0;
+        mainContent.classList.remove('hidden');
+        gameControls.classList.remove('hidden');
+        feedbackContainer.classList.add('hidden');
+        scoreScreen.classList.add('hidden');
+        displayImage();
+        updateProgress();
+    }
+
+    function displayImage() {
+        if (currentImageIndex < totalQuestions) {
+            gameImage.src = shuffledImages[currentImageIndex].src;
+        } else {
+            endGame();
+        }
+    }
+
+    function updateProgress() {
+        progressSpan.textContent = `${currentImageIndex + 1}/${totalQuestions}`;
+    }
+
+    function showFeedback(isCorrect, correctAnswerType) {
+        gameControls.classList.add('hidden');
+        feedbackContainer.classList.remove('hidden');
+        const feedbackMessage = feedbackContainer.querySelector('.feedback-message');
+        feedbackMessage.classList.remove('correct', 'incorrect');
+
+        if (isCorrect) {
+            feedbackText.textContent = `Yes, This is ${correctAnswerType.toUpperCase()}`;
+            feedbackMessage.classList.add('correct');
+        } else {
+            feedbackText.textContent = `No, This is ${correctAnswerType.toUpperCase()}`;
+            feedbackMessage.classList.add('incorrect');
+        }
+    }
+
+    function handleAnswer(userChoice) {
+        if (currentImageIndex < totalQuestions) {
+            const correctAnswer = shuffledImages[currentImageIndex].type;
+            const isCorrect = (userChoice === correctAnswer);
+            if (isCorrect) {
+                score++;
+            }
+            showFeedback(isCorrect, correctAnswer);
+        }
+    }
+
+    function nextQuestion() {
+        currentImageIndex++;
+        if (currentImageIndex < totalQuestions) {
+            feedbackContainer.classList.add('hidden');
+            gameControls.classList.remove('hidden');
+            displayImage();
+            updateProgress();
+        } else {
+            endGame();
+        }
+    }
+
+    function endGame() {
+        mainContent.classList.add('hidden');
+        scoreScreen.classList.remove('hidden');
+        finalScoreSpan.textContent = score;
+        totalQuestionsDisplaySpan.textContent = totalQuestions;
+    }
+
+    realBtn.addEventListener('click', () => handleAnswer('real'));
+    aiBtn.addEventListener('click', () => handleAnswer('ai'));
+    nextBtn.addEventListener('click', nextQuestion);
+    playAgainBtn.addEventListener('click', startGame);
+
+    if (reloadBtn) {
+        reloadBtn.addEventListener('click', () => {
+            startGame(); // Restart game instead of full page reload
+        });
+    }
+
+    startGame(); // Initialize the game when the page loads
+});

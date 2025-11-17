@@ -1,0 +1,122 @@
+
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #FAF9F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    overflow: hidden; 
+}
+
+header {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 10;
+}
+
+.header-mascot {
+    width: 90px;
+    transition: transform 0.3s ease;
+}
+
+.header-mascot-link:hover .header-mascot {
+    transform: scale(1.15) rotate(-10deg);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container {
+    margin-bottom: 20px; 
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 0;
+    color: #000;
+}
+
+p {
+    color: #333;
+    font-size: 1rem;
+    margin-top: 15px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 1.5px;
+    background-color: #ccc;
+}
+
+.start-button-wrapper {
+    position: relative;
+    margin-top: 100px;
+}
+
+.start-button {
+    background-color: #FEEA74;
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 18px 90px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 7px 0 #000;
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.start-button:hover {
+    background-color: #F8E062;
+    transform: translateY(-2px);
+    box-shadow: 0 9px 0 #000;
+}
+
+.start-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 3px 0 #000;
+}
+
+.partial-ghost {
+    position: absolute;
+    width: 90px;      
+    top: -35px;       
+    right: -55px;     
+    z-index: 1;
+}
+
+/* --- THIS IS THE CORRECTED CODE FOR THE NEW ARROW --- */
+/* --- FINAL CORRECTED ARROW POSITION --- */
+/* --- FINAL PIXEL-PERFECT ARROW --- */
+.hand-drawn-arrow {
+    position: absolute;
+    width: 370px;      /* Kept your size */
+    top: -3px;       /* Positioned correctly above the button */
+    left: 99px;      /* Pulled far to the left to center the curve */
+    transform: rotate(-3deg); /* Adjusted the angle */
+    z-index: 10;
+}

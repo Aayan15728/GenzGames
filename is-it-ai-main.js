@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentImageIndex = 0;
     let score = 0;
-    const totalQuestions = imageData.length;
+    let totalQuestions = 0;
     let shuffledImages = [];
 
     function shuffleArray(array) {
@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startGame() {
-        shuffledImages = shuffleArray([...imageData]);
+        shuffledImages = shuffleArray([...imageData]).slice(0, 10);
+        totalQuestions = shuffledImages.length;
         currentImageIndex = 0;
         score = 0;
         mainContent.classList.remove('hidden');
@@ -108,6 +109,16 @@ document.addEventListener('DOMContentLoaded', () => {
         scoreScreen.classList.remove('hidden');
         finalScoreSpan.textContent = score;
         totalQuestionsDisplaySpan.textContent = totalQuestions;
+
+        finalScoreSpan.classList.remove('high-score', 'medium-score', 'low-score');
+
+        if (score > 7) {
+            finalScoreSpan.classList.add('high-score');
+        } else if (score >= 3) {
+            finalScoreSpan.classList.add('medium-score');
+        } else {
+            finalScoreSpan.classList.add('low-score');
+        }
     }
 
     realBtn.addEventListener('click', () => handleAnswer('real'));

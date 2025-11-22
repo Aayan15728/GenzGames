@@ -135,11 +135,30 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(twitterUrl, '_blank');
     });
 
+    function preloadImages(imageObjects, callback) {
+        let loadedCount = 0;
+        const totalImages = imageObjects.length;
+        if (totalImages === 0) {
+            callback();
+            return;
+        }
+        imageObjects.forEach(imageData => {
+            const img = new Image();
+            img.src = imageData.src;
+            img.onload = img.onerror = () => {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    callback();
+                }
+            };
+        });
+    }
+
     if (reloadBtn) {
         reloadBtn.addEventListener('click', () => {
             startGame(); // Restart game instead of full page reload
         });
     }
 
-    startGame(); // Initialize the game when the page loads
+    preloadImages(imageData, startGame);
 });

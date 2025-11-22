@@ -1,4 +1,10 @@
 {
+  "builds": [
+    {
+      "src": "*",
+      "use": "@vercel/static"
+    }
+  ],
   "rewrites": [
     { "source": "/flappy-block-impossible", "destination": "/flappyblockimpossible.html" },
     { "source": "/flappyblock", "destination": "/flappyblock.html" },

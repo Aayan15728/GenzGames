@@ -263,38 +263,38 @@ p {
 }
 
 .score-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 30px !important;
 
-    width: 100%;          /* keep this */
+    width: 100% !important;          /* keep this */
     max-width: none !important;  /* FIXED */
 
-    margin: auto;
-    padding: 40px 20px;
-    background: transparent;
-    text-align: center;
-    white-space: nowrap;
+    margin: auto !important;
+    padding: 40px 20px !important;
+    background: transparent !important;
+    text-align: center !important;
+    white-space: nowrap !important;
 }
 
 .score-screen h1 {
-    white-space: nowrap;  /* NEW */
+    white-space: nowrap !important;  /* NEW */
     font-size: 4.2rem !important;
     font-weight: 900 !important;
-    margin: 0;
-    letter-spacing: 1px;
-    color: #000;
+    margin: 0 !important;
+    letter-spacing: 1px !important;
+    color: #000 !important;
 }
 
 .final-score-text {
-    font-size: 20px;
-    color: #000;
-    font-weight: 700;
-    margin: 0;
-    white-space: nowrap;  /* already good */
-    display: inline-block; /* NEW — FIXES WRAP */
+    font-size: 20px !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;  /* already good */
+    display: inline-block !important; /* NEW — FIXES WRAP */
 }
 
 .score-highlight {
@@ -314,37 +314,37 @@ p {
 }
 
 .play-again-btn {
-    background-color: #FDD835;
-    color: #000;
-    padding: 15px 40px;
-    font-size: 1.6rem;
-    border-radius: 16px;
-    border: 3px solid #000;
-    font-weight: 900;
-    box-shadow: 0 6px 0px rgba(0, 0, 0, 1);
-    transition: all 0.1s ease-in-out;
-    cursor: pointer;
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
+    background-color: #FDD835 !important;
+    color: #000 !important;
+    padding: 15px 40px !important;
+    font-size: 1.6rem !important;
+    border-radius: 16px !important;
+    border: 3px solid #000 !important;
+    font-weight: 900 !important;
+    box-shadow: 0 6px 0px rgba(0, 0, 0, 1) !important;
+    transition: all 0.1s ease-in-out !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
 }
 
 #tweet-score-btn {
-    background: #ffffff;
-    color: #000000;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 3px 3px 0px #000000;
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.2rem;
-    margin-top: 15px;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 10px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-size: 1.2rem !important;
+    margin-top: 15px !important;
 }
 
 #tweet-score-btn:hover {

@@ -11,10 +11,11 @@ body {
 
 .container {
     width: 100%;
-    max-width: 380px;
+    max-width: 380px;   /* FIXED */
     text-align: center;
     margin: auto;
 }
+
 
 header {
     position: absolute;
@@ -101,6 +102,11 @@ p {
     font-weight: bold;
     box-shadow: 0 3px 0px rgba(0, 0, 0, 1);
     transition: all 0.1s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 1);
 }
 
 .btn:active {
@@ -255,9 +261,23 @@ p {
     }
 
     .play-again-btn {
-        font-size: 18px;
-        padding: 12px 20px;
-    }
+    background-color: #FDD835;
+    color: #000;
+    padding: 15px 40px;
+    font-size: 1.6rem;
+    border-radius: 16px;
+    border: 3px solid #000;
+    font-weight: 900;
+    box-shadow: 0 8px 0px rgba(0, 0, 0, 1);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+
+    display: inline-flex;       /* <— FIX 1 */
+    align-items: center;        /* <— vertically centers text */
+    justify-content: center;    /* <— centers text horizontally */
+    width: auto;                /* <— FIX 2: button expands */
+    white-space: nowrap;        /* prevent wrapping */
+}
 }
 
 .score-screen {
@@ -265,46 +285,106 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    background-color: #f8f8f8;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 320px;
-    box-sizing: border-box;
+    gap: 30px;
+
+    width: 100%;          /* keep this */
+    max-width: none !important;  /* FIXED */
+
     margin: auto;
+    padding: 40px 20px;
+    background: transparent;
+    text-align: center;
+    white-space: nowrap;
 }
 
-.score-screen h2 {
-    font-size: 36px;
+.score-screen h1 {
+    white-space: nowrap;  /* NEW */
+    font-size: 4.2rem !important;
+    font-weight: 900 !important;
     margin: 0;
-    font-weight: 700;
+    letter-spacing: 1px;
     color: #000;
 }
 
-.score-screen p {
-    font-size: 18px;
-    color: #888;
+.final-score-text {
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
     margin: 0;
-    border-bottom: none;
-    padding-bottom: 0;
+    white-space: nowrap;  /* already good */
+    display: inline-block; /* NEW — FIXES WRAP */
+}
+
+.score-highlight {
+    font-size: 22px;
+}
+
+.score-highlight.high-score {
+    color: #4CAF50; /* Green for scores > 7 */
+}
+
+.score-highlight.medium-score {
+    color: #FF9800; /* Orange for scores 3-7 */
+}
+
+.score-highlight.low-score {
+    color: #F44336; /* Red for scores < 3 */
 }
 
 .play-again-btn {
-    background-color: #F9A825;
+    background-color: #FDD835;
     color: #000;
-    padding: 12px 24px;
-    font-size: 20px;
-    border-radius: 12px;
-    border: 2px solid #000;
-    font-weight: bold;
-    box-shadow: 0 2px 0px rgba(0, 0, 0, 1);
+    padding: 15px 40px;
+    font-size: 1.6rem;
+    border-radius: 16px;
+    border: 3px solid #000;
+    font-weight: 900;
+    box-shadow: 0 6px 0px rgba(0, 0, 0, 1);
     transition: all 0.1s ease-in-out;
     cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+#tweet-score-btn {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #000000;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+#tweet-score-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+#tweet-score-btn .icon {
+    margin-right: 0.5rem;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+}
+
+.play-again-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0px rgba(0, 0, 0, 1);
 }
 
 .play-again-btn:active {
-    transform: translateY(1px);
-    box-shadow: 0 1px 0px rgba(0, 0, 0, 1);
+    transform: translateY(2px);
+    box-shadow: 0 4px 0px rgba(0, 0, 0, 1);
 }

@@ -1,8 +1,8 @@
 {
+  "build": {
+    "command": "echo 'No build required'"
+  },
   "rewrites": [
-    { "source": "/flappy-block-impossible", "destination": "/flappyblockimpossible.html" },
-    { "source": "/flappyblock", "destination": "/flappyblock.html" },
-    { "source": "/universe-game", "destination": "/universe.html" },
     { "source": "/rock-paper-scissors", "destination": "/rps.html" },
     { "source": "/tictactoe", "destination": "/tictactoe.html" },
     { "source": "/sudoku", "destination": "/sudoku.html" },
@@ -24,25 +24,16 @@
     { "source": "/impossible-games-to-play-online", "destination": "/blog4.html" },
     { "source": "/flappy-bird-alternatives-2025", "destination": "/flappy-bird-alternatives-2025.html" },
     { "source": "/play-2048-online-tips-and-tricks", "destination": "/play-2048-online-tips-and-tricks.html" },
-    { "source": "/what-is-genzgames", "destination": "/what-is-genzgames.html" },
-    { "source": "/paradox", "destination": "/paradox.html" },
-    { "source": "/compliment-button", "destination": "/compliment-clicker.html" },
-     { "source": "/about-us", "destination": "/about-us.html" },
-     { "source": "/terms-of-use", "destination": "/terms-of-use.html" },
-     { "source": "/browser-games-to-try-once", "destination": "/browser-games-to-try-once.html" },
-     { "source": "/why-play-browser-games", "destination": "/why-play-browser-games.html" },
-     { "source": "/ten-years-ago", "destination": "/ten-years-ago.html" },
-     { "source": "/why-i-like-genzgames", "destination": "/why-i-like-genzgames.html" }
+    { "source": "/what-is-genzgames", "destination": "/what-is-genzgames.html" }
   ],
-
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true }
   ],
-
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
+        { "key": "Link", "value": "<https://genzgames.fun/>; rel=\"canonical\"" },
         { "key": "X-Robots-Tag", "value": "index, follow" },
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
@@ -50,15 +41,15 @@
     {
       "source": "/sitemap.xml",
       "headers": [
-        { "key": "Content-Type", "value": "text/xml; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=600" }
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
         { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        { "key": "Cache-Control", "value": "public, max-age=600" }
       ]
     }
   ]

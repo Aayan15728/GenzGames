@@ -49,15 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
         currentImageIndex = 0;
         score = 0;
 
-        mainContent.style.display = 'block';
-        gameControls.style.display = 'block';
-        feedbackContainer.style.display = 'none';
-        scoreScreen.style.display = 'none';
-
-        // Keep using classes for parts of the UI where it's not failing
-        mainContent.classList.remove('hidden');
-        gameControls.classList.remove('hidden');
-
+        mainContent.hidden = false;
+        gameControls.hidden = false;
+        feedbackContainer.hidden = true;
+        scoreScreen.hidden = true;
 
         displayImage();
         updateProgress();
@@ -76,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showFeedback(isCorrect, correctAnswerType) {
-        gameControls.style.display = 'none';
-        feedbackContainer.style.display = 'flex';
+        gameControls.hidden = true;
+        feedbackContainer.hidden = false;
         const feedbackMessage = feedbackContainer.querySelector('.feedback-message');
         feedbackMessage.classList.remove('correct', 'incorrect');
 
@@ -104,8 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function nextQuestion() {
         currentImageIndex++;
         if (currentImageIndex < totalQuestions) {
-            feedbackContainer.style.display = 'none';
-            gameControls.style.display = 'block';
+            feedbackContainer.hidden = true;
+            gameControls.hidden = false;
             displayImage();
             updateProgress();
         } else {
@@ -114,8 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function endGame() {
-        mainContent.style.display = 'none';
-        scoreScreen.style.display = 'flex';
+        mainContent.hidden = true;
+        scoreScreen.hidden = false;
         finalScoreSpan.textContent = score;
         totalQuestionsDisplaySpan.textContent = totalQuestions;
 

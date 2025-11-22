@@ -48,10 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
         totalQuestions = shuffledImages.length;
         currentImageIndex = 0;
         score = 0;
+
+        mainContent.style.display = 'block';
+        gameControls.style.display = 'block';
+        feedbackContainer.style.display = 'none';
+        scoreScreen.style.display = 'none';
+
+        // Keep using classes for parts of the UI where it's not failing
         mainContent.classList.remove('hidden');
         gameControls.classList.remove('hidden');
-        feedbackContainer.classList.add('hidden');
-        scoreScreen.classList.add('hidden');
+
+
         displayImage();
         updateProgress();
     }
@@ -69,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showFeedback(isCorrect, correctAnswerType) {
-        gameControls.classList.add('hidden');
-        feedbackContainer.classList.remove('hidden');
+        gameControls.style.display = 'none';
+        feedbackContainer.style.display = 'flex';
         const feedbackMessage = feedbackContainer.querySelector('.feedback-message');
         feedbackMessage.classList.remove('correct', 'incorrect');
 
@@ -97,8 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function nextQuestion() {
         currentImageIndex++;
         if (currentImageIndex < totalQuestions) {
-            feedbackContainer.classList.add('hidden');
-            gameControls.classList.remove('hidden');
+            feedbackContainer.style.display = 'none';
+            gameControls.style.display = 'block';
             displayImage();
             updateProgress();
         } else {
@@ -107,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function endGame() {
-        mainContent.classList.add('hidden');
-        scoreScreen.classList.remove('hidden');
+        mainContent.style.display = 'none';
+        scoreScreen.style.display = 'flex';
         finalScoreSpan.textContent = score;
         totalQuestionsDisplaySpan.textContent = totalQuestions;
 

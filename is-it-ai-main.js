@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded: Event fired.');
     const gameImage = document.getElementById('game-image');
     const realBtn = document.querySelector('.real-btn');
     const aiBtn = document.querySelector('.ai-btn');

@@ -260,24 +260,6 @@ p {
         font-size: 16px;
     }
 
-    .play-again-btn {
-    background-color: #FDD835;
-    color: #000;
-    padding: 15px 40px;
-    font-size: 1.6rem;
-    border-radius: 16px;
-    border: 3px solid #000;
-    font-weight: 900;
-    box-shadow: 0 8px 0px rgba(0, 0, 0, 1);
-    transition: all 0.1s ease-in-out;
-    cursor: pointer;
-
-    display: inline-flex;       /* <— FIX 1 */
-    align-items: center;        /* <— vertically centers text */
-    justify-content: center;    /* <— centers text horizontally */
-    width: auto;                /* <— FIX 2: button expands */
-    white-space: nowrap;        /* prevent wrapping */
-}
 }
 
 .score-screen {
@@ -362,6 +344,7 @@ p {
     text-decoration: none;
     display: inline-block;
     font-size: 1.2rem;
+    margin-top: 15px;
 }
 
 #tweet-score-btn:hover {

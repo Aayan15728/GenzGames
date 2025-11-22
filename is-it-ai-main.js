@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const finalScoreSpan = document.getElementById('final-score');
     const totalQuestionsDisplaySpan = document.getElementById('total-questions-display');
     const playAgainBtn = document.querySelector('.play-again-btn');
+    const tweetScoreBtn = document.getElementById('tweet-score-btn');
 
 
     const imageData = [
@@ -125,6 +126,13 @@ document.addEventListener('DOMContentLoaded', () => {
     aiBtn.addEventListener('click', () => handleAnswer('ai'));
     nextBtn.addEventListener('click', nextQuestion);
     playAgainBtn.addEventListener('click', startGame);
+
+    tweetScoreBtn.addEventListener('click', () => {
+        const text = `I scored ${score}/${totalQuestions} in the GENZGames — IS IT AI CHALLENGE! Can you beat my score?`;
+        const url = 'https://genzgames.fun/';
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+        window.open(twitterUrl, '_blank');
+    });
 
     if (reloadBtn) {
         reloadBtn.addEventListener('click', () => {

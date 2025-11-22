@@ -142,7 +142,7 @@ p {
 
 .feedback-container {
     margin-bottom: 20px;
-    display: none; /* Changed to none as default state */
+    display: flex; /* Default display for when it should be visible */
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -188,7 +188,7 @@ p {
 }
 
 .hidden {
-    display: none; /* Removed !important */
+    display: none !important; /* Ensures it overrides other display properties */
 }
 
 .info-icon-container {
@@ -263,7 +263,7 @@ p {
 }
 
 .score-screen {
-    display: none; /* Changed to none as default state */
+    display: flex; /* Default display for when it should be visible */
     flex-direction: column;
     align-items: center;
     justify-content: center;

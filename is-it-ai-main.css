@@ -1,6 +1,6 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #FFFFFF;
+    background-color: #FDFCF7;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -142,7 +142,7 @@ p {
 
 .feedback-container {
     margin-bottom: 20px;
-    display: flex; /* Default display for when it should be visible */
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -188,7 +188,7 @@ p {
 }
 
 .hidden {
-    display: none !important; /* Ensures it overrides other display properties */
+    display: none !important;
 }
 
 .info-icon-container {
@@ -260,17 +260,35 @@ p {
         font-size: 16px;
     }
 
+    .play-again-btn {
+    background-color: #FDD835;
+    color: #000;
+    padding: 15px 40px;
+    font-size: 1.6rem;
+    border-radius: 16px;
+    border: 3px solid #000;
+    font-weight: 900;
+    box-shadow: 0 8px 0px rgba(0, 0, 0, 1);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+
+    display: inline-flex;       /* <— FIX 1 */
+    align-items: center;        /* <— vertically centers text */
+    justify-content: center;    /* <— centers text horizontally */
+    width: auto;                /* <— FIX 2: button expands */
+    white-space: nowrap;        /* prevent wrapping */
+}
 }
 
 .score-screen {
-    display: flex; /* Default display for when it should be visible */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
 
     width: 100%;          /* keep this */
-    max-width: none;  /* FIXED */
+    max-width: none !important;  /* FIXED */
 
     margin: auto;
     padding: 40px 20px;
@@ -281,8 +299,8 @@ p {
 
 .score-screen h1 {
     white-space: nowrap;  /* NEW */
-    font-size: 4.2rem;
-    font-weight: 900;
+    font-size: 4.2rem !important;
+    font-weight: 900 !important;
     margin: 0;
     letter-spacing: 1px;
     color: #000;
@@ -344,7 +362,6 @@ p {
     text-decoration: none;
     display: inline-block;
     font-size: 1.2rem;
-    margin-top: 15px;
 }
 
 #tweet-score-btn:hover {

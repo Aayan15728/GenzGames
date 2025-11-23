@@ -17,16 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const imageData = [
-        { src: 'is-it-ai-game-image-this-image-is-real(hard).jpeg', type: 'real' },
-        { src: 'is-it-ai-game-image-this-image-is-ai(hard).png', type: 'ai' },
-        { src: 'is-it-ai-game-image-this-image-is-real(medium).jpeg', type: 'real' },
-        { src: 'is-it-ai-game-image-this-image-is-ai(impossible).jpeg', type: 'ai' },
-        { src: 'is-it-ai-game-image-this-image-is-real(easy).jpeg', type: 'real' },
-        { src: 'is-it-ai-game-image-this-image-is-ai(hard) (2).png', type: 'ai' },
-        { src: 'is-it-ai-game-image-this-image-is-real(hard).jpg', type: 'real' },
-        { src: 'is-it-ai-game-image-this-image-is-ai(hard)1.png', type: 'ai' },
-        { src: 'is-it-ai-game-image-this-image-is-ai(hard) (3).png', type: 'ai' },
-        { src: 'is-it-ai-game-image-this-image-is-real(hard)1.png', type: 'real' }
+        { src: 'is-it-ai-game-image-this-image-is-real(hard).jpeg/', type: 'real' },
+        { src: 'is-it-ai-game-image-this-image-is-ai(hard).png/', type: 'ai' },
+        { src: 'is-it-ai-game-image-this-image-is-real(medium).jpeg/', type: 'real' },
+        { src: 'is-it-ai-game-image-this-image-is-ai(impossible).jpeg/', type: 'ai' },
+        { src: 'is-it-ai-game-image-this-image-is-real(easy).jpeg/', type: 'real' },
+        { src: 'is-it-ai-game-image-this-image-is-ai(hard) (2).png/', type: 'ai' },
+        { src: 'is-it-ai-game-image-this-image-is-real(hard).jpg/', type: 'real' },
+        { src: 'is-it-ai-game-image-this-image-is-ai(hard)1.png/', type: 'ai' },
+        { src: 'is-it-ai-game-image-this-image-is-ai(hard) (3).png/', type: 'ai' },
+        { src: 'is-it-ai-game-image-this-image-is-real(hard)1.png/', type: 'real' }
     ];
 
     let currentImageIndex = 0;

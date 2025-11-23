@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOMContentLoaded: Event fired.');
     const gameImage = document.getElementById('game-image');
     const realBtn = document.querySelector('.real-btn');
     const aiBtn = document.querySelector('.ai-btn');
@@ -48,12 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
         totalQuestions = shuffledImages.length;
         currentImageIndex = 0;
         score = 0;
-
-        mainContent.hidden = false;
-        gameControls.hidden = false;
-        feedbackContainer.hidden = true;
-        scoreScreen.hidden = true;
-
+        mainContent.classList.remove('hidden');
+        gameControls.classList.remove('hidden');
+        feedbackContainer.classList.add('hidden');
+        scoreScreen.classList.add('hidden');
         displayImage();
         updateProgress();
     }
@@ -71,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showFeedback(isCorrect, correctAnswerType) {
-        gameControls.hidden = true;
-        feedbackContainer.hidden = false;
+        gameControls.classList.add('hidden');
+        feedbackContainer.classList.remove('hidden');
         const feedbackMessage = feedbackContainer.querySelector('.feedback-message');
         feedbackMessage.classList.remove('correct', 'incorrect');
 
@@ -99,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function nextQuestion() {
         currentImageIndex++;
         if (currentImageIndex < totalQuestions) {
-            feedbackContainer.hidden = true;
-            gameControls.hidden = false;
+            feedbackContainer.classList.add('hidden');
+            gameControls.classList.remove('hidden');
             displayImage();
             updateProgress();
         } else {
@@ -109,8 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function endGame() {
-        mainContent.hidden = true;
-        scoreScreen.hidden = false;
+        mainContent.classList.add('hidden');
+        scoreScreen.classList.remove('hidden');
         finalScoreSpan.textContent = score;
         totalQuestionsDisplaySpan.textContent = totalQuestions;
 
@@ -137,30 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(twitterUrl, '_blank');
     });
 
-    function preloadImages(imageObjects, callback) {
-        let loadedCount = 0;
-        const totalImages = imageObjects.length;
-        if (totalImages === 0) {
-            callback();
-            return;
-        }
-        imageObjects.forEach(imageData => {
-            const img = new Image();
-            img.src = imageData.src;
-            img.onload = img.onerror = () => {
-                loadedCount++;
-                if (loadedCount === totalImages) {
-                    callback();
-                }
-            };
-        });
-    }
-
     if (reloadBtn) {
         reloadBtn.addEventListener('click', () => {
             startGame(); // Restart game instead of full page reload
         });
     }
 
-    preloadImages(imageData, startGame);
+    startGame(); // Initialize the game when the page loads
 });

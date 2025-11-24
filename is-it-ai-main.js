@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'is-it-ai-game-image-this-image-is-ai(hard)1.png/', type: 'ai' },
         { src: 'is-it-ai-game-image-this-image-is-ai(hard) (3).png/', type: 'ai' },
         { src: 'NEW (real).jpg/', type: 'real' },
-        { src: 'NEW (real).jpg/', type: 'ai' }
+        { src: 'is-it-ai-game-image-this-image-is-ai(hard) (1).png/', type: 'ai' }
     ];
 
     let currentImageIndex = 0;

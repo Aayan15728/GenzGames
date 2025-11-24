@@ -33,7 +33,9 @@
      { "source": "/browser-games-to-try-once", "destination": "/browser-games-to-try-once.html" },
      { "source": "/why-play-browser-games", "destination": "/why-play-browser-games.html" },
      { "source": "/ten-years-ago", "destination": "/ten-years-ago.html" },
-     { "source": "/why-i-like-genzgames", "destination": "/why-i-like-genzgames.html" }
+     { "source": "/why-i-like-genzgames", "destination": "/why-i-like-genzgames.html" },
+    { "source": "/is-it-ai", "destination": "/is-it-ai.html" },
+      { "source": "/is-it-ai-", "destination": "/is-it-ai-main.html" },
   ],
 
   "redirects": [

@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tweetScoreBtn.addEventListener('click', () => {
         const text = `I scored ${score}/${totalQuestions} in the GENZGames — IS IT AI CHALLENGE! Can you beat my score?`;
-        const url = 'https://genzgames.fun/';
+        const url = 'https://genzgames.fun/is-it-ai';
         const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
         window.open(twitterUrl, '_blank');
     });

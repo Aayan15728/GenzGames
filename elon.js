@@ -149,6 +149,34 @@ document.addEventListener('DOMContentLoaded', () => {
         quantityElement.textContent = quantity;
     });
 
+    // Restart Logic
+    const restartBtn = document.getElementById('restart-btn');
+    if (restartBtn) {
+        restartBtn.addEventListener('click', () => {
+            if (typeof adBreak === 'function') {
+                adBreak({
+                    type: 'start',
+                    name: 'restart-elon',
+                    beforeAd: () => { },
+                    afterAd: () => {
+                        resetGame();
+                    },
+                });
+            } else {
+                resetGame();
+            }
+        });
+    }
+
+    function resetGame() {
+        balance = 300000000000;
+        receipt = {};
+        endMessage.classList.add('hidden');
+        renderItems();
+        updateBalance();
+        updateReceipt();
+    }
+
     renderItems();
     updateBalance();
 });

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- MOCK & STATIC DATA ---
     const MOCK_OLDEST_USER = { name: 'John', year: 1971 };
     const INERT_GASES = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn', 'Og'];
-    const COUNTRY_LIST = { A:['Argentina'], B:['Brazil'], C:['Canada','Chile','China','Colombia'], D:['Denmark'], E:['Egypt'], F:['Finland','France'], G:['Germany','Greece'], H:['Hungary'], I:['Iceland','India','Indonesia','Iran','Iraq','Ireland','Israel','Italy'], J:['Jamaica','Japan'], K:['Kenya'], L:['Luxembourg'], M:['Mexico','Monaco'], N:['Netherlands','Nigeria','Norway'], O:['Oman'], P:['Peru','Poland','Portugal'], Q:['Qatar'], R:['Romania','Russia'], S:['Senegal','Singapore','Spain','Sweden','Switzerland'], T:['Thailand','Turkey'], U:['Uganda','Ukraine','United Kingdom','United States','Uruguay'], V:['Venezuela','Vietnam'], W:[], X:[], Y:['Yemen'], Z:['Zambia','Zimbabwe'] };
+    const COUNTRY_LIST = { A: ['Argentina'], B: ['Brazil'], C: ['Canada', 'Chile', 'China', 'Colombia'], D: ['Denmark'], E: ['Egypt'], F: ['Finland', 'France'], G: ['Germany', 'Greece'], H: ['Hungary'], I: ['Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy'], J: ['Jamaica', 'Japan'], K: ['Kenya'], L: ['Luxembourg'], M: ['Mexico', 'Monaco'], N: ['Netherlands', 'Nigeria', 'Norway'], O: ['Oman'], P: ['Peru', 'Poland', 'Portugal'], Q: ['Qatar'], R: ['Romania', 'Russia'], S: ['Senegal', 'Singapore', 'Spain', 'Sweden', 'Switzerland'], T: ['Thailand', 'Turkey'], U: ['Uganda', 'Ukraine', 'United Kingdom', 'United States', 'Uruguay'], V: ['Venezuela', 'Vietnam'], W: [], X: [], Y: ['Yemen'], Z: ['Zambia', 'Zimbabwe'] };
 
     // --- GAME STATE ---
     let gameState;
@@ -35,22 +35,28 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 14, text: 'Your password must contain a number greater than 100, and it must contain P, where P is the total count of prime factors of 60 (which is 4).', status: 'fail', check: () => (gameState.password.match(/\d+/g) || []).some(n => parseInt(n) > 100) && gameState.password.includes('4') },
         { id: 15, text: 'Your password must contain a color name.', status: 'fail', check: () => /Red|Blue|Green|Yellow|Orange|Purple|Black|White/i.test(gameState.password) },
         { id: 16, text: 'Your password must contain an emoji representing a piece of food.', status: 'fail', check: () => /[🍎🍕🍔🌮🍣]/.test(gameState.password) },
-        { id: 17, text: () => `Your password must contain the result of (Length * 2) - (Special Chars), which is currently ${gameState.password.length * 2 - (gameState.password.match(/[^a-zA-Z0-9]/g) || []).length}.`, status: 'fail', check: () => {
-            const requiredValue = gameState.password.length * 2 - (gameState.password.match(/[^a-zA-Z0-9]/g) || []).length;
-            return gameState.password.includes(requiredValue.toString());
-        }},
-        { id: 18, text: 'If the password contains \'E\', it must also contain \'O\', and vice-versa.', status: 'fail', check: () => {
-            const hasE = /e/i.test(gameState.password);
-            const hasO = /o/i.test(gameState.password);
-            return (hasE && hasO) || (!hasE && !hasO);
-        }},
+        {
+            id: 17, text: () => `Your password must contain the result of (Length * 2) - (Special Chars), which is currently ${gameState.password.length * 2 - (gameState.password.match(/[^a-zA-Z0-9]/g) || []).length}.`, status: 'fail', check: () => {
+                const requiredValue = gameState.password.length * 2 - (gameState.password.match(/[^a-zA-Z0-9]/g) || []).length;
+                return gameState.password.includes(requiredValue.toString());
+            }
+        },
+        {
+            id: 18, text: 'If the password contains \'E\', it must also contain \'O\', and vice-versa.', status: 'fail', check: () => {
+                const hasE = /e/i.test(gameState.password);
+                const hasO = /o/i.test(gameState.password);
+                return (hasE && hasO) || (!hasE && !hasO);
+            }
+        },
         { id: 19, text: () => `Your password must include an ASCII loading bar for your progress: ${getAsciiLoadingBar()}`, status: 'fail', check: () => gameState.password.includes(getAsciiLoadingBar()) },
-        { id: 20, text: 'Your password must contain a country name that begins with the first letter of your password.', status: 'fail', check: () => {
-            if (gameState.password.length === 0) return false;
-            const firstLetter = gameState.password[0].toUpperCase();
-            const countries = COUNTRY_LIST[firstLetter] || [];
-            return countries.some(country => gameState.password.toLowerCase().includes(country.toLowerCase()));
-        }},
+        {
+            id: 20, text: 'Your password must contain a country name that begins with the first letter of your password.', status: 'fail', check: () => {
+                if (gameState.password.length === 0) return false;
+                const firstLetter = gameState.password[0].toUpperCase();
+                const countries = COUNTRY_LIST[firstLetter] || [];
+                return countries.some(country => gameState.password.toLowerCase().includes(country.toLowerCase()));
+            }
+        },
         { id: 21, text: 'The number of vowels in your password must be the cube root of 27 (which is 3).', status: 'fail', check: () => (gameState.password.match(/[aeiou]/ig) || []).length === 3 },
         { id: 22, text: 'Your password must include the Unicode hexadecimal code for the letter \'Z\'.', status: 'fail', check: () => gameState.password.includes('\\u005A') },
         { id: 23, text: 'Your password must contain an image URL placeholder for a 50x50 white square.', status: 'fail', check: () => gameState.password.includes('https://placehold.co/50x50/ffffff/ffffff?text=+') },
@@ -87,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 isPassed = pillar.check();
             }
-            
+
             pillar.status = isPassed ? 'pass' : 'fail';
 
             if (pillar.status !== oldStatus) {
@@ -131,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         passwordInput.value = '';
         passwordInput.disabled = false;
         completionScreen.classList.add('hidden');
-        
+
         preparePillarsDOM();
         gameState.timerInterval = setInterval(updateTimer, 1000);
         validatePillars();
@@ -170,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="info-box"><span class="label">Moon Phase</span> ${getMoonPhase()}</div>
             <div class="info-box"><span class="label">Midnight State</span> ${getMidnightState()}</div>
             <div class="info-box"><span class="label">Oldest User</span> ${MOCK_OLDEST_USER.name}</div>
-            <div class="info-box"><span class="label">Progress</span> [${gameState.pillars.filter(p=>p.status === 'pass').length}/25]</div>
+            <div class="info-box"><span class="label">Progress</span> [${gameState.pillars.filter(p => p.status === 'pass').length}/25]</div>
         `;
 
         // Update pillar text for dynamic pillars
@@ -180,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const text = pillar.text();
                 pillarElements[i].innerHTML = `<strong>Pillar ${pillar.id}:</strong> ${text}`;
             } else {
-                 pillarElements[i].innerHTML = `<strong>Pillar ${pillar.id}:</strong> ${pillar.text}`;
+                pillarElements[i].innerHTML = `<strong>Pillar ${pillar.id}:</strong> ${pillar.text}`;
             }
         }
     }
@@ -201,7 +207,22 @@ document.addEventListener('DOMContentLoaded', () => {
         validatePillars();
     });
 
-    restartBtn.addEventListener('click', startGame);
+    restartBtn.addEventListener('click', () => {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-password-game',
+                beforeAd: () => {
+                    // Game is text-based, minimal pause logic needed
+                },
+                afterAd: () => {
+                    startGame();
+                },
+            });
+        } else {
+            startGame();
+        }
+    });
 
     // --- INITIALIZE ---
     startGame();

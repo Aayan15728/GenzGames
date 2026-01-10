@@ -170,7 +170,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Event Listeners ---
     startButton.addEventListener('click', startGame);
-    restartButton.addEventListener('click', init);
+    restartButton.addEventListener('click', () => {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-game',
+                beforeAd: () => {
+                   bgMusic.pause();
+                },
+                afterAd: () => {
+                   bgMusic.play().catch(e => console.log("Music play failed"));
+                   init();
+                },
+            });
+        } else {
+            console.log('AdBreak function not found, skipping ad.');
+            init();
+        }
+    });
     document.addEventListener('keydown', (e) => {
         if (e.code === 'Space') {
             if (gameState === 'playing') player.flap();

@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Ocean+Lightning": "Storm",
         "Hurricane+Lightning": "Thunderstorm",
         "Thunderstorm+Human": "Fear",
-        
+
         // Life Evolution
         "Algae+Time": "Fish",
         "Fish+Land": "Amphibian",
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Gamer+Time": "Streamer",
         "Streamer+Internet": "Content Creator",
         "Content Creator+Social Media": "Influencer",
-        
+
         // Human Civilization
         "Human+Knowledge": "Civilization",
         "Civilization+Electricity": "Technology",
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Human+Space": "Astronaut",
         "Human+Ocean": "Sailor",
         "Human+Air": "Pilot",
-        
+
         // Technology and Science
         "Science+Human": "Scientist",
         "Scientist+Space": "Astronomer",
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Rocket+Human": "Astronaut",
         "Technology+Ocean": "Submarine",
         "Technology+Information": "Smartphone",
-        
+
         // Space and Cosmos
         "Space+Light": "Star",
         "Star+Star": "Binary Star",
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Space+Theory": "Cosmology",
         "Cosmology+Origin": "Big Bang",
         "Big Bang+Time": "Universe",
-        
+
         // Weather and Natural Phenomena
         "Earth+Atmosphere": "Weather",
         "Weather+Cold": "Snow",
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Earth+Rain": "Rainforest",
         "Earth+Season": "Climate",
         "Climate+Change": "Global Warming",
-        
+
         // Materials and Elements
         "Earth+Knowledge": "Chemistry",
         "Chemistry+Element": "Periodic Table",
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Metal+Electricity": "Conductor",
         "Glass+Sand": "Fiber Optic",
         "Fiber Optic+Data": "Internet",
-        
+
         // Energy and Forces
         "Fire+Knowledge": "Energy",
         "Energy+Motion": "Kinetic Energy",
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Force+Atom": "Strong Force",
         "Force+Radioactivity": "Weak Force",
         "Force+Opposite": "Reaction",
-        
+
         // Abstract Concepts
         "Human+Thought": "Idea",
         "Idea+Communication": "Language",
@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Religion+Building": "Temple",
         "Religion+Leader": "Priest",
         "Religion+Text": "Scripture",
-        
+
         // Fun and Whimsical
         "Human+Joke": "Comedy",
         "Comedy+Performance": "Stand-up",
@@ -468,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Hobby+Star": "Astronomy",
         "Hobby+Fish": "Fishing",
         "Hobby+Craft": "DIY",
-        
+
         // Modern Technology
         "Computer+Small": "Laptop",
         "Computer+Portable": "Smartphone",
@@ -500,7 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Internet+Work": "Remote Work",
         "Internet+Education": "Online Learning",
         "Internet+Doctor": "Telemedicine",
-        
+
         // Food and Cuisine
         "Plant+Human": "Agriculture",
         "Agriculture+Technology": "Farm",
@@ -593,7 +593,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Storm": "🌩️",
         "Thunderstorm": "⛈️",
         "Fear": "😱",
-        
+
         // Life Evolution
         "Fish": "🐟",
         "Amphibian": "🐸",
@@ -643,7 +643,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Streamer": "🎥",
         "Content Creator": "📹",
         "Influencer": "📱",
-        
+
         // Human Civilization
         "Knowledge": "📚",
         "Civilization": "🏙️",
@@ -713,7 +713,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Astronaut": "👨‍🚀",
         "Sailor": "⚓",
         "Pilot": "✈️",
-        
+
         // Technology and Science
         "Computer": "💻",
         "Laptop": "💻",
@@ -748,7 +748,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Inventor": "👨‍🔬",
         "Scientist": "👩‍🔬",
         "Researcher": "🔍",
-        
+
         // Space and Cosmos
         "Future": "🔮",
         "Space Travel": "🚀",
@@ -778,7 +778,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Alien": "👽",
         "UFO": "🛸",
         "Extraterrestrial": "👽",
-        
+
         // Weather and Natural Phenomena
         "Snow": "❄️",
         "Ice": "🧊",
@@ -801,7 +801,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Wind Power": "🌬️",
         "Hydropower": "💧",
         "Geothermal": "♨️",
-        
+
         // Materials and Elements
         "Metal": "⚙️",
         "Steel": "🔩",
@@ -826,7 +826,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Ceramic": "🏺",
         "Concrete": "🧱",
         "Brick": "🧱",
-        
+
         // Energy and Forces
         "Gravity": "🧲",
         "Magnetism": "🧲",
@@ -847,7 +847,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Time": "⏰",
         "Space": "🌌",
         "Dimension": "📏",
-        
+
         // Abstract Concepts
         "Love": "❤️",
         "Hate": "💔",
@@ -879,7 +879,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Reason": "🤔",
         "Wisdom": "🦉",
         "Intelligence": "🧠",
-        
+
         // Fun and Whimsical
         "Unicorn": "🦄",
         "Dragon": "🐉",
@@ -905,7 +905,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Robot": "🤖",
         "Cyborg": "🤖",
         "Alien": "👽",
-        
+
         // Modern Technology
         "Virtual Reality": "🥽",
         "Augmented Reality": "👓",
@@ -932,7 +932,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Game": "🎮",
         "E-book": "📚",
         "Digital Art": "🎨",
-        
+
         // Food and Cuisine
         "Bread": "🍞",
         "Cheese": "🧀",
@@ -976,9 +976,22 @@ document.addEventListener('DOMContentLoaded', () => {
         loadGameState();
         renderBoard();
         renderJournal();
-        
+
         // Event Listeners
-        resetButton.addEventListener('click', resetGame);
+        resetButton.addEventListener('click', () => {
+            if (typeof adBreak === 'function') {
+                adBreak({
+                    type: 'start',
+                    name: 'restart-universe',
+                    beforeAd: () => { },
+                    afterAd: () => {
+                        resetGame();
+                    },
+                });
+            } else {
+                resetGame();
+            }
+        });
         searchInput.addEventListener('input', filterJournal);
         discoveriesButton.addEventListener('click', () => {
             discoveriesButton.classList.add('active');
@@ -993,7 +1006,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Setup initial elements
         setupInitialElements();
-        
+
         // Setup drag and drop
         setupDragListeners();
     }
@@ -1001,11 +1014,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Setup initial elements on the board
     function setupInitialElements() {
         const initialElements = Array.from(discovered).slice(0, 4); // First 4 discovered elements
-        
+
         initialElements.forEach((element, index) => {
             const x = 100 + (index % 2) * 150;
             const y = 100 + Math.floor(index / 2) * 100;
-            
+
             placedElements.push({
                 id: `element-${Date.now()}-${index}`,
                 element: element,
@@ -1013,23 +1026,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 y: y
             });
         });
-        
+
         renderBoard();
     }
 
     // Render the game board with all placed elements
     function renderBoard() {
         if (renderPending) return;
-        
+
         renderPending = true;
         requestAnimationFrame(() => {
             elementBoard.innerHTML = '';
-            
+
             placedElements.forEach(item => {
                 const card = createElementCard(item);
                 elementBoard.appendChild(card);
             });
-            
+
             renderPending = false;
             lastRenderTime = performance.now();
         });
@@ -1045,18 +1058,18 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.top = `${item.y}px`;
         card.style.transform = 'translate3d(0,0,0)';
         card.style.contain = 'layout paint';
-        
+
         const symbol = document.createElement('div');
         symbol.className = 'element-symbol';
         symbol.textContent = getElementSymbol(item.element);
-        
+
         const name = document.createElement('div');
         name.className = 'element-name';
         name.textContent = item.element;
-        
+
         card.appendChild(symbol);
         card.appendChild(name);
-        
+
         return card;
     }
 
@@ -1077,158 +1090,158 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start dragging an element
     function startDrag(e) {
         if (!e.target.closest('.element-card')) return;
-        
+
         const card = e.target.closest('.element-card');
         draggedElement = card;
-        
+
         // Calculate the offset from the pointer to the card's top-left corner
         const rect = card.getBoundingClientRect();
         dragOffsetX = e.clientX - rect.left;
         dragOffsetY = e.clientY - rect.top;
-        
+
         // Store original position for undo
         originalPosition = {
             x: parseInt(card.style.left),
             y: parseInt(card.style.top)
         };
-        
+
         // Add dragging class for visual feedback
         card.classList.add('dragging');
-        
+
         // Set pointer capture to track movement even outside the element
         card.setPointerCapture(e.pointerId);
-        
+
         e.preventDefault();
     }
 
     // Drag an element
     function drag(e) {
         if (!draggedElement) return;
-        
+
         // Calculate new position based on pointer position and offset
         const boardRect = elementBoard.getBoundingClientRect();
         const x = e.clientX - boardRect.left - dragOffsetX;
         const y = e.clientY - boardRect.top - dragOffsetY;
-        
+
         // Apply position with hardware acceleration
         draggedElement.style.left = `${x}px`;
         draggedElement.style.top = `${y}px`;
         draggedElement.style.transform = 'translate3d(0,0,0)';
-        
+
         e.preventDefault();
     }
 
     // End dragging an element
     function endDrag(e) {
         if (!draggedElement) return;
-        
+
         // Remove dragging class
         draggedElement.classList.remove('dragging');
-        
+
         // Check for overlapping elements and potential combinations
         const overlappingElement = findOverlappingElement(draggedElement);
-        
+
         if (overlappingElement) {
             // Try to combine elements
             const element1 = draggedElement.dataset.element;
             const element2 = overlappingElement.dataset.element;
-            
+
             const combinationKey1 = `${element1}+${element2}`;
             const combinationKey2 = `${element2}+${element1}`;
-            
+
             let newElement = null;
-            
+
             if (combinations[combinationKey1]) {
                 newElement = combinations[combinationKey1];
             } else if (combinations[combinationKey2]) {
                 newElement = combinations[combinationKey2];
             }
-            
+
             if (newElement) {
                 // Create merge animation
                 createMergeAnimation(draggedElement, overlappingElement);
-                
+
                 // Remove the combined elements
-                placedElements = placedElements.filter(item => 
+                placedElements = placedElements.filter(item =>
                     item.id !== draggedElement.id && item.id !== overlappingElement.id
                 );
-                
+
                 // Add the new element at the midpoint between the two combined elements
                 const x1 = parseInt(draggedElement.style.left);
                 const y1 = parseInt(draggedElement.style.top);
                 const x2 = parseInt(overlappingElement.style.left);
                 const y2 = parseInt(overlappingElement.style.top);
-                
+
                 const newX = (x1 + x2) / 2;
                 const newY = (y1 + y2) / 2;
-                
+
                 const newItem = {
                     id: `element-${Date.now()}`,
                     element: newElement,
                     x: newX,
                     y: newY
                 };
-                
+
                 placedElements.push(newItem);
-                
+
                 // Check if this is a new discovery
                 const isNewDiscovery = !discovered.has(newElement);
                 if (isNewDiscovery) {
                     discovered.add(newElement);
                     showToast(`Discovered: ${newElement}!`);
-                    
+
                     // Trigger haptic feedback if supported
                     if (navigator.vibrate) {
                         navigator.vibrate(200);
                     }
                 }
-                
+
                 // Save game state
                 saveGameState();
-                
+
                 // Render the updated board and journal
                 renderBoard();
                 renderJournal();
             } else {
                 // No combination found, just update the position in placedElements
-                updateElementPosition(draggedElement.id, 
-                    parseInt(draggedElement.style.left), 
+                updateElementPosition(draggedElement.id,
+                    parseInt(draggedElement.style.left),
                     parseInt(draggedElement.style.top)
                 );
             }
         } else {
             // Just update the position in placedElements
-            updateElementPosition(draggedElement.id, 
-                parseInt(draggedElement.style.left), 
+            updateElementPosition(draggedElement.id,
+                parseInt(draggedElement.style.left),
                 parseInt(draggedElement.style.top)
             );
         }
-        
+
         // Reset dragged element
         draggedElement = null;
-        
+
         e.preventDefault();
     }
 
     // Find an overlapping element with the dragged element
     function findOverlappingElement(draggedCard) {
         const draggedRect = draggedCard.getBoundingClientRect();
-        
+
         // Check all element cards except the dragged one
         const cards = Array.from(document.querySelectorAll('.element-card')).filter(card => card !== draggedCard);
-        
+
         for (const card of cards) {
             const cardRect = card.getBoundingClientRect();
-            
+
             // Calculate overlap
             const overlap = calculateOverlap(draggedRect, cardRect);
-            
+
             // If overlap is significant (more than 30%), consider it a match
             if (overlap > 0.3) {
                 return card;
             }
         }
-        
+
         return null;
     }
 
@@ -1236,11 +1249,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function calculateOverlap(rect1, rect2) {
         const xOverlap = Math.max(0, Math.min(rect1.right, rect2.right) - Math.max(rect1.left, rect2.left));
         const yOverlap = Math.max(0, Math.min(rect1.bottom, rect2.bottom) - Math.max(rect1.top, rect2.top));
-        
+
         const overlapArea = xOverlap * yOverlap;
         const rect1Area = rect1.width * rect1.height;
         const rect2Area = rect2.width * rect2.height;
-        
+
         // Return the overlap as a percentage of the smaller rectangle
         return overlapArea / Math.min(rect1Area, rect2Area);
     }
@@ -1259,23 +1272,23 @@ document.addEventListener('DOMContentLoaded', () => {
     function createMergeAnimation(element1, element2) {
         const rect1 = element1.getBoundingClientRect();
         const rect2 = element2.getBoundingClientRect();
-        
+
         // Create a temporary element for the animation
         const animElement = document.createElement('div');
         animElement.className = 'element-card merge-animation';
-        
+
         // Position it at the midpoint between the two elements
         const midX = (rect1.left + rect2.left) / 2 + window.scrollX;
         const midY = (rect1.top + rect2.top) / 2 + window.scrollY;
-        
+
         animElement.style.left = `${midX - elementBoard.getBoundingClientRect().left}px`;
         animElement.style.top = `${midY - elementBoard.getBoundingClientRect().top}px`;
         animElement.style.width = `${(rect1.width + rect2.width) / 2}px`;
         animElement.style.height = `${(rect1.height + rect2.height) / 2}px`;
-        
+
         // Add it to the board
         elementBoard.appendChild(animElement);
-        
+
         // Remove it after the animation completes
         setTimeout(() => {
             animElement.remove();
@@ -1285,45 +1298,45 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render the journal with discovered elements
     function renderJournal(sortAlphabetically = false) {
         journalContent.innerHTML = '';
-        
+
         let elements = Array.from(discovered);
-        
+
         // Apply search filter if there's a search query
         const searchQuery = searchInput.value.toLowerCase();
         if (searchQuery) {
-            elements = elements.filter(element => 
+            elements = elements.filter(element =>
                 element.toLowerCase().includes(searchQuery)
             );
         }
-        
+
         // Sort elements
         if (sortAlphabetically) {
             elements.sort();
         } else {
             // Sort by discovery order (assuming the order in the Set)
         }
-        
+
         elements.forEach(element => {
             const journalElement = document.createElement('div');
             journalElement.className = 'journal-element';
             journalElement.dataset.element = element;
-            
+
             const symbol = document.createElement('div');
             symbol.className = 'journal-element-symbol';
             symbol.textContent = getElementSymbol(element);
-            
+
             const name = document.createElement('div');
             name.className = 'journal-element-name';
             name.textContent = element;
-            
+
             journalElement.appendChild(symbol);
             journalElement.appendChild(name);
-            
+
             // Add click event to add this element to the board
             journalElement.addEventListener('click', () => {
                 addElementToBoard(element);
             });
-            
+
             journalContent.appendChild(journalElement);
         });
     }
@@ -1333,14 +1346,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Find a random position that's not too close to existing elements
         const boardRect = elementBoard.getBoundingClientRect();
         const margin = 50;
-        
+
         let x, y, attempts = 0;
         let validPosition = false;
-        
+
         while (!validPosition && attempts < 10) {
             x = margin + Math.random() * (boardRect.width - 2 * margin);
             y = margin + Math.random() * (boardRect.height - 2 * margin);
-            
+
             // Check if this position is far enough from existing elements
             validPosition = true;
             for (const item of placedElements) {
@@ -1350,16 +1363,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
                 }
             }
-            
+
             attempts++;
         }
-        
+
         // If we couldn't find a good position, just use a random one
         if (!validPosition) {
             x = margin + Math.random() * (boardRect.width - 2 * margin);
             y = margin + Math.random() * (boardRect.height - 2 * margin);
         }
-        
+
         // Add the element to placedElements
         const newItem = {
             id: `element-${Date.now()}`,
@@ -1367,9 +1380,9 @@ document.addEventListener('DOMContentLoaded', () => {
             x: x,
             y: y
         };
-        
+
         placedElements.push(newItem);
-        
+
         // Save game state and render
         saveGameState();
         renderBoard();
@@ -1384,20 +1397,20 @@ document.addEventListener('DOMContentLoaded', () => {
     function showToast(message, type = 'success') {
         const toast = document.createElement('div');
         toast.className = `toast toast-${type}`;
-        
+
         const icon = document.createElement('div');
         icon.className = 'toast-icon';
         icon.textContent = type === 'success' ? '✨' : 'ℹ️';
-        
+
         const text = document.createElement('div');
         text.className = 'toast-message';
         text.textContent = message;
-        
+
         toast.appendChild(icon);
         toast.appendChild(text);
-        
+
         toastContainer.appendChild(toast);
-        
+
         // Remove the toast after a delay
         setTimeout(() => {
             toast.style.opacity = '0';
@@ -1414,11 +1427,11 @@ document.addEventListener('DOMContentLoaded', () => {
             placedElements = [];
             undoStack = [];
             redoStack = [];
-            
+
             saveGameState();
             setupInitialElements();
             renderJournal();
-            
+
             showToast('Game reset successfully');
         }
     }
@@ -1429,7 +1442,7 @@ document.addEventListener('DOMContentLoaded', () => {
             discovered: Array.from(discovered),
             placedElements: placedElements
         };
-        
+
         localStorage.setItem('universe-game-state', JSON.stringify(gameState));
     }
 
@@ -1445,7 +1458,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Error loading game state:', e);
             }
         }
-        
+
         // Load theme preference
         const savedTheme = localStorage.getItem('universe-theme');
         if (savedTheme === 'dark') {

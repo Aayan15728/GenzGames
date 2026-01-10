@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4794089557255348"
-     crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FVY18NNVSR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-FVY18NNVSR');
-</script>
+<head>
+    <script async data-ad-client="pub-4794089557255348" data-ad-frequency-hint="1s" data-adbreak-test="on"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+        </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVY18NNVSR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-FVY18NNVSR');
+    </script>
     <meta name="google-adsense-account" content="ca-pub-4794089557255348">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build Your Own Universe – Creative Browser Game | GenZ Games</title>
-  <meta name="description" content="Build your universe in Make Your Own Universe on GenZ Games. Free, creative, and fun browser game. Design planets, stars, and civilizations instantly.">
+    <meta name="description"
+        content="Build your universe in Make Your Own Universe on GenZ Games. Free, creative, and fun browser game. Design planets, stars, and civilizations instantly.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="universe.css">
 </head>
+
 <body>
     <a href="index.html" class="back-button">⬅️ Back to Genz Games</a>
     <div id="game-wrapper">
@@ -41,16 +45,26 @@
             <aside id="universe-journal">
                 <div class="journal-header">
                     <div class="search-container">
-                        <input type="text" id="search-elements" placeholder="Search elements..." aria-label="Search elements">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input type="text" id="search-elements" placeholder="Search elements..."
+                            aria-label="Search elements">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                            height="20">
+                            <path
+                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                        </svg>
                     </div>
                     <div class="journal-controls">
                         <button id="discoveries-button" class="active" aria-label="Show discoveries">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            </svg>
                             Discoveries
                         </button>
                         <button id="sort-button" aria-label="Sort elements">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z" />
+                            </svg>
                             Sort
                         </button>
                     </div>
@@ -66,7 +80,7 @@
         <div class="game-controls">
             <button id="reset-button" aria-label="Reset game">Reset</button>
         </div>
-        
+
         <div class="game-footer">
             <p>Made by Genz Games</p>
         </div>
@@ -77,10 +91,48 @@
     <script src="universe.js"></script>
     <div class="hidden-description" style="position: absolute; left: -9999px; top: -9999px;">
         <h2>What is "Build Your Universe" and What to Do:</h2>
-        <p>"Build Your Universe" is an expansive and deeply creative sandbox game that empowers players to become cosmic architects, starting from fundamental elements and progressively crafting an entire cosmos. Inspired by classic alchemy and discovery games, this online experience challenges your imagination and logical thinking by tasking you with combining various elements to unlock new ones. You begin with a handful of basic components, such as "Earth," "Water," "Fire," and "Air," and through experimentation, you discover how these interact to form more complex substances, objects, and even life forms. The game features an "element-board" where you drag and drop elements to combine them, and a "universe-journal" that meticulously tracks all your "discoveries." The core objective is to expand your knowledge and your universe by uncovering every possible element, from simple compounds like "Steam" and "Mud" to intricate concepts like "Human," "Planet," and "Galaxy." This process is not just about mindless clicking; it requires careful consideration of potential combinations, often leading to surprising and delightful results. Each new discovery opens up further possibilities, creating an ever-growing tree of elements that reflects the complexity of a real universe. Your primary task is to experiment relentlessly, think creatively about how different elements might interact, and systematically work through the vast array of potential combinations. The game encourages a sense of wonder and exploration, rewarding curiosity and logical deduction. It's a perfect blend of scientific curiosity and imaginative play, offering endless hours of engagement for those who love to build, discover, and understand the fundamental building blocks of existence. "Build Your Universe" is more than just a game; it's a journey of creation, allowing you to witness the evolution of your own personal cosmos from its most basic components to its most magnificent structures.</p>
+        <p>"Build Your Universe" is an expansive and deeply creative sandbox game that empowers players to become cosmic
+            architects, starting from fundamental elements and progressively crafting an entire cosmos. Inspired by
+            classic alchemy and discovery games, this online experience challenges your imagination and logical thinking
+            by tasking you with combining various elements to unlock new ones. You begin with a handful of basic
+            components, such as "Earth," "Water," "Fire," and "Air," and through experimentation, you discover how these
+            interact to form more complex substances, objects, and even life forms. The game features an "element-board"
+            where you drag and drop elements to combine them, and a "universe-journal" that meticulously tracks all your
+            "discoveries." The core objective is to expand your knowledge and your universe by uncovering every possible
+            element, from simple compounds like "Steam" and "Mud" to intricate concepts like "Human," "Planet," and
+            "Galaxy." This process is not just about mindless clicking; it requires careful consideration of potential
+            combinations, often leading to surprising and delightful results. Each new discovery opens up further
+            possibilities, creating an ever-growing tree of elements that reflects the complexity of a real universe.
+            Your primary task is to experiment relentlessly, think creatively about how different elements might
+            interact, and systematically work through the vast array of potential combinations. The game encourages a
+            sense of wonder and exploration, rewarding curiosity and logical deduction. It's a perfect blend of
+            scientific curiosity and imaginative play, offering endless hours of engagement for those who love to build,
+            discover, and understand the fundamental building blocks of existence. "Build Your Universe" is more than
+            just a game; it's a journey of creation, allowing you to witness the evolution of your own personal cosmos
+            from its most basic components to its most magnificent structures.</p>
 
         <h2>How to Play "Build Your Universe":</h2>
-        <p>Playing "Build Your Universe" is an intuitive and highly rewarding experience centered around drag-and-drop mechanics. Upon starting the game, you'll be presented with an "element-board" which serves as your primary workspace, and an "universe-journal" on the side, initially populated with a few fundamental elements like "Earth," "Water," "Fire," and "Air." To begin creating, simply drag two elements from your journal onto the element board. Once two elements are on the board, they will attempt to combine. If the combination is valid and results in a new element, that new element will appear on the board, and it will also be added to your journal as a new "discovery." For example, combining "Water" and "Earth" might yield "Mud," or "Fire" and "Air" could create "Energy." If a combination is not valid, the elements will simply return to your journal, indicating that they cannot be combined in that specific way. The key to progressing in the game is continuous experimentation. You must think about how different elements might logically (or sometimes illogically, in a fun way) interact to form new ones. The "universe-journal" is a crucial tool; it not only lists all your discovered elements but also allows you to search for specific elements using the "search-elements" input and sort them using the "sort-button." This helps you manage your growing collection and plan your next combinations. The game does not have a strict end goal, but the ultimate satisfaction comes from discovering all possible elements and completing your journal. If you wish to start fresh, a "reset-button" is available to clear your progress and begin building a new universe. The game also features a "toast-container" for subtle notifications about new discoveries. The intuitive interface and open-ended gameplay make "Build Your Universe" an ideal game for creative minds and puzzle solvers, offering a relaxing yet stimulating environment to explore the endless possibilities of elemental combination and cosmic creation.</p>
+        <p>Playing "Build Your Universe" is an intuitive and highly rewarding experience centered around drag-and-drop
+            mechanics. Upon starting the game, you'll be presented with an "element-board" which serves as your primary
+            workspace, and an "universe-journal" on the side, initially populated with a few fundamental elements like
+            "Earth," "Water," "Fire," and "Air." To begin creating, simply drag two elements from your journal onto the
+            element board. Once two elements are on the board, they will attempt to combine. If the combination is valid
+            and results in a new element, that new element will appear on the board, and it will also be added to your
+            journal as a new "discovery." For example, combining "Water" and "Earth" might yield "Mud," or "Fire" and
+            "Air" could create "Energy." If a combination is not valid, the elements will simply return to your journal,
+            indicating that they cannot be combined in that specific way. The key to progressing in the game is
+            continuous experimentation. You must think about how different elements might logically (or sometimes
+            illogically, in a fun way) interact to form new ones. The "universe-journal" is a crucial tool; it not only
+            lists all your discovered elements but also allows you to search for specific elements using the
+            "search-elements" input and sort them using the "sort-button." This helps you manage your growing collection
+            and plan your next combinations. The game does not have a strict end goal, but the ultimate satisfaction
+            comes from discovering all possible elements and completing your journal. If you wish to start fresh, a
+            "reset-button" is available to clear your progress and begin building a new universe. The game also features
+            a "toast-container" for subtle notifications about new discoveries. The intuitive interface and open-ended
+            gameplay make "Build Your Universe" an ideal game for creative minds and puzzle solvers, offering a relaxing
+            yet stimulating environment to explore the endless possibilities of elemental combination and cosmic
+            creation.</p>
     </div>
 </body>
+
 </html>

@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         successMessage.style.display = 'none';
         board = Array(9).fill(null).map(() => Array(9).fill(0));
         solution = Array(9).fill(null).map(() => Array(9).fill(0));
-        
+
         generateSolution(board);
-        
-        for(let i=0; i<9; i++){
-            for(let j=0; j<9; j++){
+
+        for (let i = 0; i < 9; i++) {
+            for (let j = 0; j < 9; j++) {
                 solution[i][j] = board[i][j];
             }
         }
@@ -255,7 +255,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    newGameBtn.addEventListener('click', generateSudoku);
+    newGameBtn.addEventListener('click', () => {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-sudoku',
+                beforeAd: () => { },
+                afterAd: () => {
+                    generateSudoku();
+                },
+            });
+        } else {
+            generateSudoku();
+        }
+    });
     solveBtn.addEventListener('click', solveSudoku);
 
     easyBtn.addEventListener('click', () => setDifficulty('easy'));

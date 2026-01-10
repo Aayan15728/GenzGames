@@ -29,7 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    playAgainButton.addEventListener('click', resetGame);
+    playAgainButton.addEventListener('click', () => {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-rps',
+                beforeAd: () => { },
+                afterAd: () => {
+                    resetGame();
+                },
+            });
+        } else {
+            resetGame();
+        }
+    });
 
     function getAIChoice() {
         if (playerHistory.length < 3) {
@@ -66,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function playRound(playerChoice) {
         playerHistory.push(playerChoice);
         const aiChoice = getAIChoice();
-        
+
         updateChoices(playerChoice, aiChoice);
-        
+
         const winner = getWinner(playerChoice, aiChoice);
 
         if (winner === 'player') {

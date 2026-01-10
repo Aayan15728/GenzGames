@@ -23,7 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Game Initialization and Mode Selection ---
     humanVsHumanBtn.addEventListener('click', () => startGame(false));
     humanVsAiBtn.addEventListener('click', () => startGame(true));
-    playAgainBtn.addEventListener('click', resetGame);
+    playAgainBtn.addEventListener('click', () => {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-tictactoe',
+                beforeAd: () => { },
+                afterAd: () => {
+                    resetGame();
+                },
+            });
+        } else {
+            resetGame();
+        }
+    });
 
     function startGame(aiMode) {
         isAiMode = aiMode;

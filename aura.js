@@ -65,15 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     resetButton.addEventListener('click', () => {
-        // Reset form fields
-        nameInput.value = '';
-        birthMonthSelect.value = '1';
-        photoUploadInput.value = '';
-        previewImage.src = '#';
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-aura',
+                beforeAd: () => { },
+                afterAd: () => {
+                    // Reset form fields
+                    nameInput.value = '';
+                    birthMonthSelect.value = '1';
+                    photoUploadInput.value = '';
+                    previewImage.src = '#';
 
-        // Switch views
-        resultSection.classList.add('hidden');
-        formSection.classList.remove('hidden');
+                    // Switch views
+                    resultSection.classList.add('hidden');
+                    formSection.classList.remove('hidden');
+                },
+            });
+        } else {
+            // Reset form fields
+            nameInput.value = '';
+            birthMonthSelect.value = '1';
+            photoUploadInput.value = '';
+            previewImage.src = '#';
+
+            // Switch views
+            resultSection.classList.add('hidden');
+            formSection.classList.remove('hidden');
+        }
     });
 
     // Info Modal Logic

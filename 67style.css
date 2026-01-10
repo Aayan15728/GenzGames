@@ -1,0 +1,66 @@
+body {
+    font-family: sans-serif;
+}
+
+/* Custom Scrollbar for Webkit Browsers */
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.scrollbar-thumb-purple-900::-webkit-scrollbar-thumb {
+    background-color: #581c87;
+    /* purple-900 */
+    border-radius: 3px;
+}
+
+.scrollbar-thumb-purple-900::-webkit-scrollbar-thumb:hover {
+    background-color: #6b21a8;
+    /* purple-800 */
+}
+
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Animation Utilities */
+.animate-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Loader Spinner */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Run 2 - Trendy Games</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#1a1125] text-gray-100 font-sans">
+    <div id="game-page">
+        <header class="h-16 bg-[#0f0518]/95 backdrop-blur-md border-b border-white/5 flex items-center justify-between px-4 sticky top-0 z-50">
+            <a href="/" class="flex items-center space-x-2">
+                <div class="bg-purple-600 p-2 rounded-lg"><i data-lucide="gamepad-2" class="w-6 h-6 text-white"></i></div>
+                <span class="font-bold text-xl">Trendy Games</span>
+            </a>
+            <div class="flex items-center space-x-4 ml-4">
+                 <button onclick="toggleFullscreen()" class="p-2 rounded-full bg-white/10 text-white hover:bg-white/20" id="fullscreen-btn">
+                    <i data-lucide="fullscreen" class="w-5 h-5"></i>
+                </button>
+                <button class="flex items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full text-sm font-bold"><i data-lucide="user" class="w-4 h-4"></i> <span>Log In</span></button>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto p-4 md:p-6">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Main Game Area -->
+                <div class="flex-1">
+                    <div id="game-container" class="w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl shadow-purple-900/50 border-2 border-purple-800/50 relative">
+                        <iframe src="https://archive.org/embed/templerun-2-v-1.55.5-hs_202502" frameborder="0" class="w-full h-full" allowfullscreen></iframe>
+                    </div>
+                     <div class="mt-6 bg-[#0f0518] p-5 rounded-2xl">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                            <div>
+                                <h1 class="text-4xl font-black text-white">Temple Run 2</h1>
+                                <p class="text-gray-400 mt-1">Developed by Imangi</p>
+                            </div>
+                            <div class="flex items-center gap-2 mt-4 sm:mt-0">
+                                <div class="flex items-center gap-1 bg-yellow-400/10 text-yellow-400 px-3 py-1.5 rounded-full">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <span class="font-bold text-sm">4.3</span>
+                                </div>
+                                <div class="text-gray-400 text-sm">(100K votes)</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-[#0f0518] p-5 rounded-2xl">
+                        <h2 class="text-2xl font-bold mb-4">Description</h2>
+                        <p class="text-gray-300 leading-relaxed">Run, jump, turn and slide in this endless runner classic!</p>
+                        <h3 class="text-xl font-bold mt-6 mb-3">Controls</h3>
+                        <p class="text-gray-300">Arrow Keys to Move and Jump.</p>
+                    </div>
+                </div>
+
+                <!-- Similar Games Sidebar -->
+                <aside class="w-full lg:w-80 lg:flex-shrink-0">
+                    <div class="bg-[#0f0518] p-5 rounded-2xl">
+                        <h2 class="text-2xl font-bold mb-4 text-white">Similar Games</h2>
+                        <div class="space-y-4">
+                            <a href="rooftop-snipers.html" class="flex items-center gap-4 group p-2 rounded-lg hover:bg-purple-600/20 transition-colors">
+                                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80" class="w-20 h-16 object-cover rounded-lg" />
+                                <div>
+                                    <h4 class="font-bold text-white group-hover:text-purple-300">Rooftop Snipers</h4>
+                                    <p class="text-sm text-gray-400">Action</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+    <script>
+        lucide.createIcons();
+        function toggleFullscreen() {
+            const el = document.getElementById('game-container');
+            if (!document.fullscreenElement) {
+                el.requestFullscreen().catch(err => console.log(err));
+            } else {
+                document.exitFullscreen();
+            }
+        }
+        document.addEventListener('fullscreenchange', () => {
+            const btnIcon = document.querySelector('#fullscreen-btn i');
+            if (!document.fullscreenElement) {
+                btnIcon.setAttribute('data-lucide', 'fullscreen');
+            } else {
+                btnIcon.setAttribute('data-lucide', 'minimize');
+            }
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

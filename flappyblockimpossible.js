@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function init() {
         canvasWidth = canvas.width = canvas.offsetWidth;
         canvasHeight = canvas.height = canvas.offsetHeight;
-        
+
         player = Object.assign({}, playerSprite);
         player.y = canvasHeight / 2;
         obstacles = [];
@@ -170,7 +170,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Event Listeners ---
     startButton.addEventListener('click', startGame);
-    restartButton.addEventListener('click', init);
+    restartButton.addEventListener('click', () => {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-game-impossible',
+                beforeAd: () => {
+                    bgMusic.pause();
+                },
+                afterAd: () => {
+                    bgMusic.play().catch(e => console.log("Music play failed"));
+                    init();
+                },
+            });
+        } else {
+            init();
+        }
+    });
     document.addEventListener('keydown', (e) => {
         if (e.code === 'Space') {
             if (gameState === 'playing') player.flap();

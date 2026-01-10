@@ -230,8 +230,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event Listeners
     document.addEventListener('keydown', handleKeyPress);
-    restartButton.addEventListener('click', initGame);
-    restartButtonGameOver.addEventListener('click', initGame);
+    restartButton.addEventListener('click', () => {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-game-8192',
+                beforeAd: () => {
+                    // No audio to pause, or specific game loop to stop (turn-based)
+                },
+                afterAd: () => {
+                    initGame();
+                },
+            });
+        } else {
+            initGame();
+        }
+    });
+    restartButtonGameOver.addEventListener('click', () => {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-game-8192',
+                beforeAd: () => {
+                    // No audio to pause
+                },
+                afterAd: () => {
+                    initGame();
+                },
+            });
+        } else {
+            initGame();
+        }
+    });
 
     // Initial game start
     initGame();

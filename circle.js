@@ -264,8 +264,23 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.addEventListener('touchmove', (e) => { e.preventDefault(); draw(e.touches[0]); }, { passive: false });
     canvas.addEventListener('touchend', (e) => { e.preventDefault(); stopDrawing(); }, { passive: false });
 
-    drawAgainBtn.addEventListener('click', resetGame);
-    clearBtn.addEventListener('click', resetGame);
+    const handleReset = () => {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-circle',
+                beforeAd: () => { },
+                afterAd: () => {
+                    resetGame();
+                },
+            });
+        } else {
+            resetGame();
+        }
+    };
+
+    drawAgainBtn.addEventListener('click', handleReset);
+    clearBtn.addEventListener('click', handleReset);
 
     updateHighScoreDisplay();
     drawTargetCircle();

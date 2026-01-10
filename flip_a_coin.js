@@ -21,12 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear previous animation
         coin.style.animation = 'none';
         coin.offsetHeight; // Force reflow
-        
+
         // Determine result
         const isHeads = Math.random() < 0.5;
         const flipCount = 5 + Math.floor(Math.random() * 5); // 5-10 flips
         const totalRotation = flipCount * 360 + (isHeads ? 0 : 180);
-        
+
         // Set final rotation for CSS animation
         coin.style.setProperty('--final-rotation', `${totalRotation}deg`);
         coin.classList.add('flipping');
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             totalFlips++;
             updateScoreboard();
-            
+
             coin.classList.remove('flipping');
             isFlipping = false;
             flipButton.disabled = false;
@@ -62,25 +62,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     resetButton.addEventListener('click', () => {
-        totalFlips = 0;
-        headsCount = 0;
-        tailsCount = 0;
-        updateScoreboard();
-        resultDisplay.textContent = '';
-        resultDisplay.classList.remove('show');
-        coin.className = 'coin';
-        coin.style.transform = 'rotateY(0deg)';
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-flipcoin',
+                beforeAd: () => { },
+                afterAd: () => {
+                    totalFlips = 0;
+                    headsCount = 0;
+                    tailsCount = 0;
+                    updateScoreboard();
+                    resultDisplay.textContent = '';
+                    resultDisplay.classList.remove('show');
+                    coin.className = 'coin';
+                    coin.style.transform = 'rotateY(0deg)';
+                },
+            });
+        } else {
+            totalFlips = 0;
+            headsCount = 0;
+            tailsCount = 0;
+            updateScoreboard();
+            resultDisplay.textContent = '';
+            resultDisplay.classList.remove('show');
+            coin.className = 'coin';
+            coin.style.transform = 'rotateY(0deg)';
+        }
     });
+});
 
-    function updateScoreboard() {
-        totalFlipsDisplay.textContent = totalFlips;
-        headsCountDisplay.textContent = headsCount;
-        tailsCountDisplay.textContent = tailsCount;
-        
-        // Add animation to the scoreboard
-        const scoreboard = document.querySelector('.scoreboard');
-        scoreboard.style.animation = 'none';
-        scoreboard.offsetHeight;
-        scoreboard.style.animation = 'pulse 0.3s ease-out';
-    }
+function updateScoreboard() {
+    totalFlipsDisplay.textContent = totalFlips;
+    headsCountDisplay.textContent = headsCount;
+    tailsCountDisplay.textContent = tailsCount;
+
+    // Add animation to the scoreboard
+    const scoreboard = document.querySelector('.scoreboard');
+    scoreboard.style.animation = 'none';
+    scoreboard.offsetHeight;
+    scoreboard.style.animation = 'pulse 0.3s ease-out';
+}
 });

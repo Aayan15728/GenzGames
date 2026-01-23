@@ -26,6 +26,35 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const auraKeys = Object.keys(auras);
 
+    /**
+     * Helper to show ads safely
+     * @param {string} type - 'nextView' for restarts, 'start' for first load
+     * @param {string} name - identifier for reporting
+     * @param {function} callback - what to do after the ad
+     */
+    function showGameAd(type, name, callback) {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: type,
+                name: name,
+                beforeAd: () => {
+                    console.log("Ad starting...");
+                },
+                afterAd: () => {
+                    callback();
+                },
+                adBreakDone: (placementInfo) => {
+                    console.log("Ad break finished. Status:", placementInfo.breakStatus);
+                    if (placementInfo.breakStatus !== 'viewed') {
+                        callback();
+                    }
+                }
+            });
+        } else {
+            callback();
+        }
+    }
+
     calculateAuraButton.addEventListener('click', () => {
         const name = nameInput.value.trim();
         const birthMonth = parseInt(birthMonthSelect.value);
@@ -64,35 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsDataURL(photoFile);
     });
 
+    function resetForm() {
+        nameInput.value = '';
+        birthMonthSelect.value = '1';
+        photoUploadInput.value = '';
+        previewImage.src = '#';
+        resultSection.classList.add('hidden');
+        formSection.classList.remove('hidden');
+    }
+
     resetButton.addEventListener('click', () => {
-        if (typeof adBreak === 'function') {
-            adBreak({
-                type: 'start',
-                name: 'restart-aura',
-                beforeAd: () => { },
-                afterAd: () => {
-                    // Reset form fields
-                    nameInput.value = '';
-                    birthMonthSelect.value = '1';
-                    photoUploadInput.value = '';
-                    previewImage.src = '#';
-
-                    // Switch views
-                    resultSection.classList.add('hidden');
-                    formSection.classList.remove('hidden');
-                },
-            });
-        } else {
-            // Reset form fields
-            nameInput.value = '';
-            birthMonthSelect.value = '1';
-            photoUploadInput.value = '';
-            previewImage.src = '#';
-
-            // Switch views
-            resultSection.classList.add('hidden');
-            formSection.classList.remove('hidden');
-        }
+        showGameAd('nextView', 'aura-reset', resetForm);
     });
 
     // Info Modal Logic

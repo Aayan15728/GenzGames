@@ -8,6 +8,35 @@ document.addEventListener('DOMContentLoaded', () => {
     let balance = 300000000000;
     let receipt = {};
 
+    /**
+     * Helper to show ads safely
+     * @param {string} type - 'nextView' for restarts, 'start' for first load
+     * @param {string} name - identifier for reporting
+     * @param {function} callback - what to do after the ad
+     */
+    function showGameAd(type, name, callback) {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: type,
+                name: name,
+                beforeAd: () => {
+                    console.log("Ad starting...");
+                },
+                afterAd: () => {
+                    callback();
+                },
+                adBreakDone: (placementInfo) => {
+                    console.log("Ad break finished. Status:", placementInfo.breakStatus);
+                    if (placementInfo.breakStatus !== 'viewed') {
+                        callback();
+                    }
+                }
+            });
+        } else {
+            callback();
+        }
+    }
+
     const items = [
         { name: 'iPhone', price: 1000, image: '1' },
         { name: 'MacBook', price: 2000, image: '2' },
@@ -153,18 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const restartBtn = document.getElementById('restart-btn');
     if (restartBtn) {
         restartBtn.addEventListener('click', () => {
-            if (typeof adBreak === 'function') {
-                adBreak({
-                    type: 'start',
-                    name: 'restart-elon',
-                    beforeAd: () => { },
-                    afterAd: () => {
-                        resetGame();
-                    },
-                });
-            } else {
-                resetGame();
-            }
+            showGameAd('nextView', 'elon-restart', resetGame);
         });
     }
 

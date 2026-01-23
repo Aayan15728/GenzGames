@@ -153,6 +153,12 @@
   <script>
     window.adsbygoogle = window.adsbygoogle || [];
     var adBreak = adConfig = function (o) { adsbygoogle.push(o); }
+
+    // MANDATORY: Initialize the H5 engine
+    adConfig({
+      preloadAdBreaks: 'on',
+      onComplete: () => { console.log("H5 SDK Finished Setup"); }
+    });
   </script>
 </head>
 

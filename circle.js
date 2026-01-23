@@ -23,6 +23,35 @@ document.addEventListener('DOMContentLoaded', () => {
     let points = [];
     let highScore = localStorage.getItem('circleHighScore') || 0;
     let targetCircle = { x: canvas.width / 2, y: canvas.height / 2, radius: 150 };
+
+    /**
+     * Helper to show ads safely
+     * @param {string} type - 'nextView' for restarts, 'start' for first load
+     * @param {string} name - identifier for reporting
+     * @param {function} callback - what to do after the ad
+     */
+    function showGameAd(type, name, callback) {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: type,
+                name: name,
+                beforeAd: () => {
+                    console.log("Ad starting...");
+                },
+                afterAd: () => {
+                    callback();
+                },
+                adBreakDone: (placementInfo) => {
+                    console.log("Ad break finished. Status:", placementInfo.breakStatus);
+                    if (placementInfo.breakStatus !== 'viewed') {
+                        callback();
+                    }
+                }
+            });
+        } else {
+            callback();
+        }
+    }
     // let currentLevel = 1; // Start at level 1 - Removed as per user request
 
     function updateHighScoreDisplay() {
@@ -265,18 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.addEventListener('touchend', (e) => { e.preventDefault(); stopDrawing(); }, { passive: false });
 
     const handleReset = () => {
-        if (typeof adBreak === 'function') {
-            adBreak({
-                type: 'start',
-                name: 'restart-circle',
-                beforeAd: () => { },
-                afterAd: () => {
-                    resetGame();
-                },
-            });
-        } else {
-            resetGame();
-        }
+        showGameAd('nextView', 'circle-reset', resetGame);
     };
 
     drawAgainBtn.addEventListener('click', handleReset);

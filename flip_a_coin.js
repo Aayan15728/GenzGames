@@ -13,6 +13,46 @@ document.addEventListener('DOMContentLoaded', () => {
     let isFlipping = false;
     let rotations = 0;
 
+    /**
+     * Helper to show ads safely
+     * @param {string} type - 'nextView' for restarts, 'start' for first load
+     * @param {string} name - identifier for reporting
+     * @param {function} callback - what to do after the ad
+     */
+    function showGameAd(type, name, callback) {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: type,
+                name: name,
+                beforeAd: () => {
+                    console.log("Ad starting...");
+                },
+                afterAd: () => {
+                    callback();
+                },
+                adBreakDone: (placementInfo) => {
+                    console.log("Ad break finished. Status:", placementInfo.breakStatus);
+                    if (placementInfo.breakStatus !== 'viewed') {
+                        callback();
+                    }
+                }
+            });
+        } else {
+            callback();
+        }
+    }
+
+    function resetCoinGame() {
+        totalFlips = 0;
+        headsCount = 0;
+        tailsCount = 0;
+        updateScoreboard();
+        resultDisplay.textContent = '';
+        resultDisplay.classList.remove('show');
+        coin.className = 'coin';
+        coin.style.transform = 'rotateY(0deg)';
+    }
+
     flipButton.addEventListener('click', () => {
         if (isFlipping) return;
         isFlipping = true;
@@ -62,32 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     resetButton.addEventListener('click', () => {
-        if (typeof adBreak === 'function') {
-            adBreak({
-                type: 'start',
-                name: 'restart-flipcoin',
-                beforeAd: () => { },
-                afterAd: () => {
-                    totalFlips = 0;
-                    headsCount = 0;
-                    tailsCount = 0;
-                    updateScoreboard();
-                    resultDisplay.textContent = '';
-                    resultDisplay.classList.remove('show');
-                    coin.className = 'coin';
-                    coin.style.transform = 'rotateY(0deg)';
-                },
-            });
-        } else {
-            totalFlips = 0;
-            headsCount = 0;
-            tailsCount = 0;
-            updateScoreboard();
-            resultDisplay.textContent = '';
-            resultDisplay.classList.remove('show');
-            coin.className = 'coin';
-            coin.style.transform = 'rotateY(0deg)';
-        }
+        showGameAd('nextView', 'flipcoin-reset', resetCoinGame);
     });
     function updateScoreboard() {
         totalFlipsDisplay.textContent = totalFlips;

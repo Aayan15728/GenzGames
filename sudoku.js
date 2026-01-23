@@ -16,6 +16,35 @@ document.addEventListener('DOMContentLoaded', () => {
     let difficulty = 'easy';
     let selectedCell = null;
 
+    /**
+     * Helper to show ads safely
+     * @param {string} type - 'nextView' for restarts, 'start' for first load
+     * @param {string} name - identifier for reporting
+     * @param {function} callback - what to do after the ad
+     */
+    function showGameAd(type, name, callback) {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: type,
+                name: name,
+                beforeAd: () => {
+                    console.log("Ad starting...");
+                },
+                afterAd: () => {
+                    callback();
+                },
+                adBreakDone: (placementInfo) => {
+                    console.log("Ad break finished. Status:", placementInfo.breakStatus);
+                    if (placementInfo.breakStatus !== 'viewed') {
+                        callback();
+                    }
+                }
+            });
+        } else {
+            callback();
+        }
+    }
+
     function createBoard() {
         boardElement.innerHTML = '';
         for (let i = 0; i < 9; i++) {
@@ -256,18 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     newGameBtn.addEventListener('click', () => {
-        if (typeof adBreak === 'function') {
-            adBreak({
-                type: 'start',
-                name: 'restart-sudoku',
-                beforeAd: () => { },
-                afterAd: () => {
-                    generateSudoku();
-                },
-            });
-        } else {
-            generateSudoku();
-        }
+        showGameAd('nextView', 'sudoku-new-game', generateSudoku);
     });
     solveBtn.addEventListener('click', solveSudoku);
 

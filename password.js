@@ -17,6 +17,35 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameState;
     let pillarElements = [];
 
+    /**
+     * Helper to show ads safely
+     * @param {string} type - 'nextView' for restarts, 'start' for first load
+     * @param {string} name - identifier for reporting
+     * @param {function} callback - what to do after the ad
+     */
+    function showGameAd(type, name, callback) {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: type,
+                name: name,
+                beforeAd: () => {
+                    console.log("Ad starting...");
+                },
+                afterAd: () => {
+                    callback();
+                },
+                adBreakDone: (placementInfo) => {
+                    console.log("Ad break finished. Status:", placementInfo.breakStatus);
+                    if (placementInfo.breakStatus !== 'viewed') {
+                        callback();
+                    }
+                }
+            });
+        } else {
+            callback();
+        }
+    }
+
     // --- PILLAR DEFINITIONS ---
     const definePillars = () => [
         { id: 1, text: 'Your password must be at least 10 characters long.', status: 'fail', check: () => gameState.password.length >= 10 },
@@ -208,20 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     restartBtn.addEventListener('click', () => {
-        if (typeof adBreak === 'function') {
-            adBreak({
-                type: 'start',
-                name: 'restart-password-game',
-                beforeAd: () => {
-                    // Game is text-based, minimal pause logic needed
-                },
-                afterAd: () => {
-                    startGame();
-                },
-            });
-        } else {
-            startGame();
-        }
+        showGameAd('nextView', 'password-restart', startGame);
     });
 
     // --- INITIALIZE ---

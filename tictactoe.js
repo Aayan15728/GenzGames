@@ -20,22 +20,40 @@ document.addEventListener('DOMContentLoaded', () => {
         [0, 4, 8], [2, 4, 6]             // Diagonals
     ];
 
+    /**
+     * Helper to show ads safely
+     * @param {string} type - 'nextView' for restarts, 'start' for first load
+     * @param {string} name - identifier for reporting
+     * @param {function} callback - what to do after the ad
+     */
+    function showGameAd(type, name, callback) {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: type,
+                name: name,
+                beforeAd: () => {
+                    console.log("Ad starting...");
+                },
+                afterAd: () => {
+                    callback();
+                },
+                adBreakDone: (placementInfo) => {
+                    console.log("Ad break finished. Status:", placementInfo.breakStatus);
+                    if (placementInfo.breakStatus !== 'viewed') {
+                        callback();
+                    }
+                }
+            });
+        } else {
+            callback();
+        }
+    }
+
     // --- Game Initialization and Mode Selection ---
     humanVsHumanBtn.addEventListener('click', () => startGame(false));
     humanVsAiBtn.addEventListener('click', () => startGame(true));
     playAgainBtn.addEventListener('click', () => {
-        if (typeof adBreak === 'function') {
-            adBreak({
-                type: 'start',
-                name: 'restart-tictactoe',
-                beforeAd: () => { },
-                afterAd: () => {
-                    resetGame();
-                },
-            });
-        } else {
-            resetGame();
-        }
+        showGameAd('nextView', 'tictactoe-restart', resetGame);
     });
 
     function startGame(aiMode) {

@@ -23,6 +23,35 @@ document.addEventListener('DOMContentLoaded', () => {
     let aiScore = 0;
     let playerHistory = [];
 
+    /**
+     * Helper to show ads safely
+     * @param {string} type - 'nextView' for restarts, 'start' for first load
+     * @param {string} name - identifier for reporting
+     * @param {function} callback - what to do after the ad
+     */
+    function showGameAd(type, name, callback) {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: type,
+                name: name,
+                beforeAd: () => {
+                    console.log("Ad starting...");
+                },
+                afterAd: () => {
+                    callback();
+                },
+                adBreakDone: (placementInfo) => {
+                    console.log("Ad break finished. Status:", placementInfo.breakStatus);
+                    if (placementInfo.breakStatus !== 'viewed') {
+                        callback();
+                    }
+                }
+            });
+        } else {
+            callback();
+        }
+    }
+
     controlButtons.forEach(button => {
         button.addEventListener('click', () => {
             playRound(button.dataset.choice);
@@ -30,18 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     playAgainButton.addEventListener('click', () => {
-        if (typeof adBreak === 'function') {
-            adBreak({
-                type: 'start',
-                name: 'restart-rps',
-                beforeAd: () => { },
-                afterAd: () => {
-                    resetGame();
-                },
-            });
-        } else {
-            resetGame();
-        }
+        showGameAd('nextView', 'rps-restart', resetGame);
     });
 
     function getAIChoice() {

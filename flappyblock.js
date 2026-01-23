@@ -15,6 +15,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const hitSound = document.getElementById('hit-sound');
     const bgMusic = document.getElementById('bg-music');
 
+    /**
+     * Helper to show ads safely
+     * @param {string} type - 'nextView' for restarts, 'start' for first load
+     * @param {string} name - identifier for reporting
+     * @param {function} callback - what to do after the ad
+     */
+    function showGameAd(type, name, callback) {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: type,
+                name: name,
+                beforeAd: () => {
+                    console.log("Ad starting...");
+                    bgMusic.pause();
+                },
+                afterAd: () => {
+                    callback();
+                },
+                adBreakDone: (placementInfo) => {
+                    console.log("Ad break finished. Status:", placementInfo.breakStatus);
+                    if (placementInfo.breakStatus !== 'viewed') {
+                        callback();
+                    }
+                }
+            });
+        } else {
+            callback();
+        }
+    }
+
     // --- Game Configuration ---
     let canvasWidth, canvasHeight;
     const gravity = 0.5;
@@ -63,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function init() {
         canvasWidth = canvas.width = canvas.offsetWidth;
         canvasHeight = canvas.height = canvas.offsetHeight;
-        
+
         player = Object.assign({}, playerSprite);
         player.y = canvasHeight / 2;
         obstacles = [];
@@ -171,22 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Event Listeners ---
     startButton.addEventListener('click', startGame);
     restartButton.addEventListener('click', () => {
-        if (typeof adBreak === 'function') {
-            adBreak({
-                type: 'start',
-                name: 'restart-game',
-                beforeAd: () => {
-                   bgMusic.pause();
-                },
-                afterAd: () => {
-                   bgMusic.play().catch(e => console.log("Music play failed"));
-                   init();
-                },
-            });
-        } else {
-            console.log('AdBreak function not found, skipping ad.');
-            init();
-        }
+        showGameAd('nextView', 'flappyblock-restart', init);
     });
     document.addEventListener('keydown', (e) => {
         if (e.code === 'Space') {

@@ -89,17 +89,15 @@ document.addEventListener('DOMContentLoaded', () => {
             coin.style.transform = 'rotateY(0deg)';
         }
     });
-});
+    function updateScoreboard() {
+        totalFlipsDisplay.textContent = totalFlips;
+        headsCountDisplay.textContent = headsCount;
+        tailsCountDisplay.textContent = tailsCount;
 
-function updateScoreboard() {
-    totalFlipsDisplay.textContent = totalFlips;
-    headsCountDisplay.textContent = headsCount;
-    tailsCountDisplay.textContent = tailsCount;
-
-    // Add animation to the scoreboard
-    const scoreboard = document.querySelector('.scoreboard');
-    scoreboard.style.animation = 'none';
-    scoreboard.offsetHeight;
-    scoreboard.style.animation = 'pulse 0.3s ease-out';
-}
+        // Add animation to the scoreboard
+        const scoreboard = document.querySelector('.scoreboard');
+        scoreboard.style.animation = 'none';
+        scoreboard.offsetHeight;
+        scoreboard.style.animation = 'pulse 0.3s ease-out';
+    }
 });

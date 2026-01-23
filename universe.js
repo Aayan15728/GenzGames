@@ -1423,17 +1423,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset the game
     function resetGame() {
         if (confirm('Are you sure you want to reset? This will clear all your discoveries.')) {
-            discovered = new Set(['Water', 'Fire', 'Earth', 'Wind']);
-            placedElements = [];
-            undoStack = [];
-            redoStack = [];
-
-            saveGameState();
-            setupInitialElements();
-            renderJournal();
-
-            showToast('Game reset successfully');
+            if (typeof adBreak === 'function') {
+                adBreak({
+                    type: 'start',
+                    name: 'restart-universe',
+                    beforeAd: () => { },
+                    afterAd: () => {
+                        performReset();
+                    }
+                });
+            } else {
+                performReset();
+            }
         }
+    }
+
+    function performReset() {
+        discovered = new Set(['Water', 'Fire', 'Earth', 'Wind']);
+        placedElements = [];
+        undoStack = [];
+        redoStack = [];
+
+        saveGameState();
+        setupInitialElements();
+        renderJournal();
+
+        showToast('Game reset successfully');
     }
 
     // Save game state to localStorage

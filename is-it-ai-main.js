@@ -126,7 +126,20 @@ document.addEventListener('DOMContentLoaded', () => {
     realBtn.addEventListener('click', () => handleAnswer('real'));
     aiBtn.addEventListener('click', () => handleAnswer('ai'));
     nextBtn.addEventListener('click', nextQuestion);
-    playAgainBtn.addEventListener('click', startGame);
+    playAgainBtn.addEventListener('click', () => {
+        if (typeof adBreak === 'function') {
+            adBreak({
+                type: 'start',
+                name: 'restart-is-it-ai',
+                beforeAd: () => { },
+                afterAd: () => {
+                    startGame();
+                },
+            });
+        } else {
+            startGame();
+        }
+    });
 
     tweetScoreBtn.addEventListener('click', () => {
         const text = `I scored ${score}/${totalQuestions} in the GENZGames — IS IT AI CHALLENGE! Can you beat my score?`;
@@ -137,7 +150,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (reloadBtn) {
         reloadBtn.addEventListener('click', () => {
-            startGame(); // Restart game instead of full page reload
+            if (typeof adBreak === 'function') {
+                adBreak({
+                    type: 'start',
+                    name: 'restart-is-it-ai-reload',
+                    beforeAd: () => { },
+                    afterAd: () => {
+                        startGame();
+                    },
+                });
+            } else {
+                startGame();
+            }
         });
     }
 
